@@ -8,7 +8,7 @@ import UserProfile from '../Dialogboxes/UserProfile';
 import Spinner from '../loaders/Spinner';
 import ScrollableChat from './ScrollableChat';
 
-const EndPoint = "https://letschat-react-app.herokuapp.com/ "
+const EndPoint = "https://letschat-react-app.herokuapp.com/"
 var socket, selecetdChatCompare;
 
 const MessageBox = (props) => {
