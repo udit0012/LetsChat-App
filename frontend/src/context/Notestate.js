@@ -15,7 +15,7 @@ const Notestate = (props) => {
 
     const fetchuserdata = async () => {
         try {
-            const resposne = await fetch("http://localhost:8000/LetsChatApi/auth/getUser", {
+            const resposne = await fetch("https://letschat-react-app.herokuapp.com/LetsChatApi/auth/getUser", {
                 method: "GET",
                 headers: {
                     "Content-type": "application/json",

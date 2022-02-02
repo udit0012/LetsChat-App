@@ -20,7 +20,7 @@ const GroupModal = ({ opengroupmodal, groupmodal }) => {
             return
         }
         try {
-            const response = await fetch("http://localhost:8000/LetsChatApi/chat/group/creategroup", {
+            const response = await fetch("https://letschat-react-app.herokuapp.com/LetsChatApi/chat/group/creategroup", {
                 method: "POST",
                 headers: {
                     'Content-Type': "application/json",
@@ -52,7 +52,7 @@ const GroupModal = ({ opengroupmodal, groupmodal }) => {
             return
         }
         try {
-            const response = await fetch(`http://localhost:8000/LetsChatApi/allusers/user?search=${search}`, {
+            const response = await fetch(`https://letschat-react-app.herokuapp.com/LetsChatApi/allusers/user?search=${search}`, {
                 method: "GET",
                 headers: {
                     'Content-Type': "application/json",

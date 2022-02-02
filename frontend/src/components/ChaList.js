@@ -33,7 +33,7 @@ const ChatList = (props) => {
   }
   const fetchchats = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/LetsChatApi/chat/fetchchats`, {
+      const response = await fetch(`https://letschat-react-app.herokuapp.com/LetsChatApi/chat/fetchchats`, {
         method: "GET",
         headers: {
           'Content-Type': "application/json",

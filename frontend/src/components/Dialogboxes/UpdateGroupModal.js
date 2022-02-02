@@ -21,7 +21,7 @@ const UpdateGroupModal = ({ open, close }) => {
       return
     }
     try {
-      const response = await fetch(`http://localhost:8000/LetsChatApi/allusers/user?search=${query}`, {
+      const response = await fetch(`https://letschat-react-app.herokuapp.com/LetsChatApi/allusers/user?search=${query}`, {
         method: "GET",
         headers: {
           'Content-Type': "application/json",
@@ -41,7 +41,7 @@ const UpdateGroupModal = ({ open, close }) => {
       return
     }
     try {
-      const response = await fetch(`http://localhost:8000/LetsChatApi/chat/group/removefromgroup`, {
+      const response = await fetch(`https://letschat-react-app.herokuapp.com/LetsChatApi/chat/group/removefromgroup`, {
         method: "PUT",
         headers: {
           'Content-Type': "application/json",
@@ -67,7 +67,7 @@ const UpdateGroupModal = ({ open, close }) => {
     }
     try {
       setAdduserlaoding(true)
-      const response = await fetch(`http://localhost:8000/LetsChatApi/chat/group/addtogroup`, {
+      const response = await fetch(`https://letschat-react-app.herokuapp.com/LetsChatApi/chat/group/addtogroup`, {
         method: "PUT",
         headers: {
           'Content-Type': "application/json",
@@ -94,7 +94,7 @@ const UpdateGroupModal = ({ open, close }) => {
     }
     try {
       setRenameLoading(true)
-      const response = await fetch("http://localhost:8000/LetsChatApi/chat/group/renamegroup", {
+      const response = await fetch("https://letschat-react-app.herokuapp.com/LetsChatApi/chat/group/renamegroup", {
         method: 'PUT',
         headers: {
           "Content-type": "application/json",

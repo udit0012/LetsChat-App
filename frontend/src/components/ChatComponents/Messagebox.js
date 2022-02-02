@@ -48,7 +48,7 @@ const MessageBox = (props) => {
         if (!selectedchat) return;
         try {
             setLoading(true)
-            const response = await fetch(`http://localhost:8000/LetsChatApi/messages/fetchallmessages/${selectedchat._id}`, {
+            const response = await fetch(`https://letschat-react-app.herokuapp.com/LetsChatApi/messages/fetchallmessages/${selectedchat._id}`, {
                 method: "GET",
                 headers: {
                     'Content-Type': "application/json",
@@ -70,7 +70,7 @@ const MessageBox = (props) => {
         if (newmessage) {
             socket.emit("stop typing", selectedchat._id)
             try {
-                const response = await fetch(`http://localhost:8000/LetsChatApi/messages/sendmessage`, {
+                const response = await fetch(`https://letschat-react-app.herokuapp.com/LetsChatApi/messages/sendmessage`, {
                     method: "POST",
                     headers: {
                         'Content-Type': "application/json",
