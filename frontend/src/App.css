@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
+
+:root{
+  --appcolor: black;
+}
+.w100{
+  width: 100%;
+}
+.h100{
+  height: 100%;
+}
+.Navbar{
+  display: flex;
+  height: 8vh;
+}
+.disflex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoname {
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+.alert-danger {
+  background-color: #ffd1d6;
+  border: 3px solid red;
+  color: red;
+}
+.alert-warning {
+  background-color: #fff0c2;
+  border: 3px solid #ffc000;
+  color: #ffc000;
+}
+.alert-success {
+  background-color: #aaffd9;
+  border: 3px solid rgb(0, 153, 89);
+  color: rgb(0, 153, 89);
+}
+.usericon{
+  text-decoration: none; 
+  margin: 0 .2em;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.profileimg{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 .5em;
+}
+.lbtn {
+  color: white;
+  background-color: var(--appcolor);
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.4em 1em;
+  margin: 0.2em 0;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  transition: 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+.lbtn:hover {
+  opacity: 0.8;
+}
+.lbtnOutline {
+  color: var(--appcolor);
+  border: 1px solid var(--appcolor);
+  background-color: transparent;
+  opacity: 1;
+}
+.lbtnOutline:hover {
+  color: white;
+  opacity: 1;
+  background-color: var(--appcolor);
+}
+.RegLegContainer {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px black;
+  position: relative;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+}
+.RegLegBox {
+  width: 60%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+  border-radius: 1em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  transform: skewX(-20deg);
+  transform-origin: -50% 0;
+}
+.RegLegForm {
+  width: 50%;
+  height: 70%;
+  margin-right: 9em;
+}
+.formsubhead {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 0.5em;
+}
+.RegLegImage {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.registerInput {
+  width: 100%;
+  margin: 0.4em 0;
+  border-radius: 0.2em;
+  border: 1px solid var(--appcolor);
+  display: flex;
+  align-items: center;
+}
+.RegInput{
+  padding: .5em 0.5em;
+  font-size: 1.2rem;
+  border: none;
+  width: 90%;
+  border-radius: .2em;
+  outline: none;
+  background-color: transparent;
+}
+.RegInput::placeholder {
+  color: #191919
+}
+.dialog{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(59, 59, 59, 0.4);
+  top: 0;
+}
+.dialogbox{
+  width: 40%;
+  height: 45%;
+  left: 50%;
+  top: 50%;
+  position: relative;
+  transform: translate(-50%,-50%);
+  background-color: white;
+  border-radius: .6em;
+}
+.userdetails{
+  color: black;
+  padding: .5em 0;
+}
+.userdetails .detail{
+  font-size: 1.5rem;
+  font-family: "PT Sans Narrow", sans-serif;
+  margin: .3em 0;
+}
+.userdetails .name{
+  font-size: 3rem;
+  font-weight: bold;
+}
+.inputbox{
+  background-color: white;
+  border-radius: .5em;
+  overflow: hidden;
+  width: 80%;
+  height: 60%;
+  padding: .1em .6em;
+}
+.searchinput{
+  width: 90%;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  margin-left: .2em;
+  color: #000000;
+}
+.topbar{
+  justify-content: flex-start;
+  height: 8%;
+}
+.topbarHead{
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: bold;
+  color: white;
+  pointer-events: none;
+}
+.menubox{
+  position: absolute;
+  left: -90px;
+  background-color: white;
+  z-index: 12;
+  border-radius: .2em;
+  padding: .5em 0;
+  width: 150px;
+  box-shadow: 5px 5px 20px var(--appcolor);
+}
+.menuItems{
+  list-style: none;
+  color: var(--appcolor);
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: .2em 0;
+  padding: .4em .5em;
+}
+.menuItems:hover{
+  background-color: var(--appcolor);
+  color: white;
+}
+.contactCard{
+  width: 97%;
+  display: flex;
+  border-bottom: 1px solid rgb(130, 130, 130);
+  padding: .6em 0;
+  cursor: pointer;
+  transition: .2s;
+  margin: 0.2em auto;
+  border-radius: .5em;
+}
+.contactCard:hover{
+  background-color: var(--appcolor);
+  color: white;
+}
+.contactinfo{
+  width: 65%;
+  display: flex;
+  flex-direction:column ;
+  margin: 0 .5em;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+.contactname{
+  width: 100%;
+  /* color: #111111; */
+  font-weight: bold;
+}
+.messagetext{
+  color: rgb(58, 58, 58);
+  margin-top: .1em;
+}
+.contactCard:hover .messagetext{
+  color: white;
+}
+.contactCard:hover .messagetime{
+  color: white;
+}
+.contactCard .icon{
+  color: var(--appcolor);
+  margin: 0 .4em;
+  cursor: pointer;
+}
+.contactCard:hover .icon{
+  color: white;
+}
+.chatcontainer{
+  position: relative;
+  flex-direction: column;
+}
+.profileheader{
+  justify-content: flex-start;
+  padding: .6em 0;;
+}
+.msgbox{
+  width: 97%;
+  height: 97%;
+  padding-top: .4em;
+  background-color: #ffffff;
+  border-radius: 1em;
+  overflow-y: auto;
+}
+.msg{
+  width: 100%;
+  display: flex;
+}
+.msgsent{
+  justify-content: flex-end;
+}
+.msgreceive{
+  justify-content: flex-start;
+}
+.msgText{
+  margin: .1em .5em;
+  padding: .3em .8em;
+  font-size: 1.3rem;
+  border-radius: .9em;
+}
+.sendername{
+  color: var(--appcolor);
+  font-size: .8rem;
+  font-weight: bold;
+  margin-top: .3em;
+  margin-bottom: .5em;
+  text-transform: capitalize;
+}
+.msgsent .msgText{
+  background-color: #e2e2e2;
+  color: var(--appcolor);
+}
+.msgreceive .msgText{
+  border: 1px solid #d2d2d2;
+  background-color: white;
+}
+.msginput{
+  width: 97%;
+  padding: .5em 0;
+}
+.msginput .inputbox{
+  padding: .4em 0;
+  display: flex;
+  align-items: center;
+}
+.chatbtn{
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  margin: 0 .4em;
+  cursor: pointer;
+}
+.footer{
+  background-color: var(--appcolor);
+  color: white;
+  padding: 2em;
+  margin-top: 5em;
+}
+.footer .RegInput{
+  color:white
+}
+.footer .RegInput::placeholder{
+  color: #ffffff;
+}
+
+.icon-btn{
+  width: 3.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: .8em 0;
+  margin: 0 .3em;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .2s;
+}
+.icon-btn img{
+  width: 50%;
+  height: 50%;
+}
+.icon-btn:hover{
+  background-color: #d6d6d6;
+}
+@media screen and (max-width: 1224px) {
+  .dialogbox{
+    width: 70%;
+    height: 45%;
+  }
+  .RegLegContainer {
+    width: 95%;
+    height: 60%;
+  }
+  .RegLegBox {
+    width: 70%;
+    transform: skewX(-20deg);
+  }
+  .RegLegForm {
+    margin-right: 6em;
+  }
+  .RegLegImage{
+    width: 20%;
+  }
+  .icon-btn{
+    width: 6%;
+    padding: .7em;
+  }
+}
+@media screen and (max-width: 700px) {
+  .dialogbox{
+    width: 100%;
+    height: 100%;
+  }
+  .userdetails .name{
+    font-size: 2rem;
+  }
+  .lbtn{
+    font-size: .8rem;
+  }
+  .RegLegContainer {
+    width: 95%;
+    height: 65%;
+  }
+  .RegLegBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skewX(0deg);
+  }
+  .RegLegForm {
+    width: 80%;
+    margin-right: 0em;
+  }
+  .loginform{
+    height: 50%;
+  }
+  .RegLegForm input {
+    width: 100%;
+  }
+  .logoname {
+    font-size: 2rem;
+    justify-content: flex-start;
+  }
+  .reglogbtn {
+    justify-content: flex-end;
+  }
+  .formsubhead {
+    font-size: 1.5rem;
+  }
+  .icon-btn{
+    width: 14%;
+  }
+  .icon-btn img{
+    width: 40%;
+  }
+}
