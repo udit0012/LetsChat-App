@@ -150,7 +150,7 @@ const MessageBox = (props) => {
             <form className='msginput w100 disflex' onSubmit={(e) => {
                 e.preventDefault();
                 if (newmessage.trim()) {
-                    sendmessage(newmessage);
+                    sendmessage(newmessage.trim());
                 }
                 else {
                     setNewmessage("")
