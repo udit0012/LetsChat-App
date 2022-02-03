@@ -29,6 +29,12 @@ const ChatList = (props) => {
   const displayMenu = () => {
     setOpenMenu(!openMenu)
   }
+  useEffect(() => {
+    if(groupmodal){
+      window.addEventListener("click",opengroupmodal())
+    }
+  }, [groupmodal]);
+  
   const displayDrawer = () => {
     setDrawer(!drawer)
   }
