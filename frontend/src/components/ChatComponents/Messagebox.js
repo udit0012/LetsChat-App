@@ -68,7 +68,7 @@ const MessageBox = (props) => {
 
     const sendmessage = async (eve) => {
         eve.preventDefault()
-        newmessage.trim()
+        setNewmessage(newmessage.trim())
         if (newmessage) {
             setNewmessage("")
             socket.emit("stop typing", selectedchat._id)
