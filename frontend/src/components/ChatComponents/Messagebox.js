@@ -151,7 +151,7 @@ const MessageBox = (props) => {
                 e.preventDefault();
                 setNewmessage(newmessage.trim())
                 setNewmessage(newmessage.trimStart())
-                if (!newmessage==="") {
+                if (newmessage!=="") {
                     sendmessage(newmessage);
                 }
                 else {
