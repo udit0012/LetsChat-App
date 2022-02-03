@@ -31,11 +31,10 @@ const Homemain = () => {
                 </div>}
                 {!isMobile && <div style={{ marginTop: ".5em", marginRight: "1em" }}>Lets Chat is the real time messaging app. It’s free, simple and works on Android phones, iPhones, tablets, computers, and smart displays, like the Google Nest Hub Max.</div>}
                 <div style={{ display: "flex", flexFlow: isMobile ? "row" : "column", justifyContent: isMobile ? "center" : "start", marginTop: ".7em" }}>
-                    <Link to={localStorage.getItem('token') ? "/ChatWithFriends" : "/login"} className='lbtn disflex'
-                        onClick={() => { setCheckbutton("chat") }} style={{ backgroundColor: appcolor, width: "40%", fontSize: isMobile ? ".8rem" : istablet ? "1rem" : "1.2rem" }}>Chat with friends</Link>
+                    <Link to={localStorage.getItem('token') ? "/LetsChat" : "/login"} className='lbtn disflex' style={{ backgroundColor: appcolor, width: "40%", fontSize: isMobile ? "1.1rem" : istablet ? "1rem" : "1.2rem" }}>Chat with friends</Link>
                 </div>
             </div>
-            <div className='w100' style={{ marginLeft: "1em" }}>
+            <div className='w100' style={{ marginLeft:isMobile?"0": "1em" }}>
                 <img style={{ width: "96%" }} src={messaging} alt="" />
             </div>
         </div>

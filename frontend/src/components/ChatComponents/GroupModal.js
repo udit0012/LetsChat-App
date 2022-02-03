@@ -73,7 +73,7 @@ const GroupModal = ({ opengroupmodal, groupmodal }) => {
             <button className='usericon closeicon' onClick={opengroupmodal} style={{ padding: ".3em" }}><span className='material-icons' style={{ color: appcolor }}>close</span></button>
         </div>
         <hr />
-        <form className='RegLegForm disflex' style={{ width: "100%", flexDirection: "column", height: "20%" }} autoComplete='off' action="post" onSubmit={HandleOnSubmit} >
+        <form className='RegLegForm disflex' style={{ width: "100%", flexDirection: "column", height:isMobile?"20vh":"20%" }} autoComplete='off' action="post" onSubmit={HandleOnSubmit} >
             <div className='registerInput' style={{ width: '70%' }}><input className='RegInput' type="text" placeholder='Group name' name="name" onChange={(e) => { setChatname(e.target.value) }} required /></div>
             <div className='registerInput' style={{ width: '70%' }}><input className='RegInput' type="text" placeholder='Add member eg: John' name="users" onChange={(e) => handlesearch(e.target.value)} required /></div>
             <button className="lbtn" type='submit' style={{ width: '70%' }}> Create group</button>

@@ -39,7 +39,7 @@ const Register = () => {
   }
 
   return (
-    <div style={{ width: "100vw", height: "100vh", fontFamily: "'PT Sans Narrow', sans-serif" }}>
+    <div style={{ width: "99.9vw", height:isMobile?"92vh": "99.9vh", fontFamily: "'PT Sans Narrow', sans-serif" }}>
       <div style={{ display: "flex" }}>
         <Link to="/" className='logoname disflex' style={{ width: "100%", color: appcolor, marginLeft: ".4em" }}>Lets Chat</Link>
         <div className='disflex reglogbtn' style={{ width: "100%", justifyContent: isMobile ? "end" : "center", marginRight: ".4em" }}><Link className='lbtn lbtnOutline ' to="/login">Login</Link></div>

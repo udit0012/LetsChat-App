@@ -58,7 +58,7 @@ const SideDrawer = (props) => {
     }
 
     return <div className='h100 w100' style={{ backgroundColor: "white", position: "absolute", left: props.drawer ? "0" : "-1000px", transition: ".1s" }}>
-        <div className='inputbar w100 disflex' style={{ height:isMobile?"7vh":"7%", backgroundColor: appcolor }}>
+        <div className='inputbar w100 disflex' style={{ height:isMobile?"70px":"7%", backgroundColor: appcolor }}>
             <div className="inputbox disflex">
                 <span className="material-icons" onClick={props.displayDrawer} style={{ cursor: "pointer", color: appcolor }}>arrow_back</span>
                 <input type="text" value={search} name="search" onChange={(e) => { setSearch(e.target.value) }} className="searchinput" placeholder='Search or start new chat' autoFocus />

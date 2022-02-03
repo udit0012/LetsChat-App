@@ -59,7 +59,7 @@
   background-color: var(--appcolor);
   border: none;
   border-radius: 0.3em;
-  padding: 0.4em 1em;
+  padding: 0.6em 1em;
   margin: 0.2em 0;
   font-size: 1.2rem;
   font-weight: bolder;
@@ -84,7 +84,7 @@
 }
 .RegLegContainer {
   width: 70%;
-  height: 70%;
+  height: 70vh;
   display: flex;
   border-radius: 1em;
   overflow: hidden;
@@ -111,6 +111,9 @@
   width: 50%;
   height: 70%;
   margin-right: 9em;
+}
+.loginContainer .RegLegForm{
+  height: 40%;
 }
 .formsubhead {
   font-size: 2rem;
@@ -373,10 +376,10 @@
   }
   .RegLegContainer {
     width: 95%;
-    height: 60%;
+    height: 60vh;
   }
   .RegLegBox {
-    height: 70vh;
+    height: 100%;
     width: 70%;
     transform: skewX(-20deg);
   }
@@ -400,11 +403,11 @@
     font-size: 2rem;
   }
   .lbtn{
-    font-size: .8rem;
+    font-size: 1.2rem;
   }
   .RegLegContainer {
     width: 95%;
-    height: 65%;
+    height: 65vh;
   }
   .RegLegBox {
     width: 100%;
@@ -416,9 +419,6 @@
   .RegLegForm {
     width: 80%;
     margin-right: 0em;
-  }
-  .loginform{
-    height: 50%;
   }
   .RegLegForm input {
     width: 100%;

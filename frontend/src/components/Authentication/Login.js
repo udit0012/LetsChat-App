@@ -39,15 +39,15 @@ const Login = () => {
   }
 
   return (
-    <div style={{ width: "100vw", height: "100vh", fontFamily: "'PT Sans Narrow', sans-serif" }}>
+    <div style={{ width: "99.9vw", height:isMobile?"92vh":"99.9vh", fontFamily: "'PT Sans Narrow', sans-serif" }}>
       <div style={{ display: "flex" }}>
         <Link to="/" className='logoname disflex' style={{ width: "100%", color: appcolor, marginLeft: ".4em" }}>Lets Chat</Link>
         <div className='disflex reglogbtn' style={{ width: "100%", justifyContent: isMobile ? "end" : "center", marginRight: ".4em" }}><Link className='lbtn lbtnOutline ' to="/register">Register</Link></div>
       </div>
-      <div className="RegLegContainer" style={{
+      <div className="RegLegContainer loginContainer" style={{
         backgroundColor: appcolor
       }}>
-        <div className='RegLegBox'>
+        <div className='RegLegBox disflex'>
           <form className='RegLegForm loginform' style={{ transform: isMobile ? "skewX(0deg)" : "skewX(20deg)" }} autoComplete='off' action="post" onSubmit={HandleOnSubmit}>
             <div className='logoname' style={{ color: appcolor }}>Lets Chat</div>
             <div className='formsubhead'>Login to your Account</div>
