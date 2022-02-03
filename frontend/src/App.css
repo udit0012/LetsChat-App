@@ -434,7 +434,7 @@
     font-size: 1.5rem;
   }
   .chatcontainer{
-    height: calc(100%-headerHeight);
+    height: calc(100%-headerHeight-footerHeight);
   }
   .icon-btn{
     width: 14%;
