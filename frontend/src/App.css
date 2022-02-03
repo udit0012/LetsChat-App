@@ -222,6 +222,10 @@
   background-color: var(--appcolor);
   color: white;
 }
+.menuItems:focus{
+  background-color: var(--appcolor);
+  color: white;
+}
 .contactCard{
   width: 97%;
   display: flex;

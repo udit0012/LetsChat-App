@@ -88,7 +88,10 @@ const ChatList = (props) => {
                 </div>
               </div>
             })}
-          </div>) : (<Spinner simple={false} big={false} />)}
+          </div>) : ( <div className='w100 disflex' style={{height:"93%"}}>
+            <div><span className='material-icons'>search</span>Search your friend</div>
+            <div>Start a conversation on LetsChat</div>
+          </div> )}
         </div>
       </div>
     </div>

@@ -25,7 +25,9 @@ const Login = () => {
     if (json.success) {
       localStorage.setItem("token", json.authtoken)
       fetchuserdata();
-      navigate("/LetsChat")
+      if(localStorage.getItem("token")){
+        navigate("/LetsChat")
+      }
       showAlert("Login successfully", "success")
     }
     else {

@@ -26,7 +26,9 @@ const Register = () => {
       localStorage.setItem("token", json.authtoken)
       fetchuserdata()
       showAlert("Registered successfully", "success")
-      navigate("/LetsChat")
+      if(localStorage.getItem("token")){
+        navigate("/LetsChat")
+      }
     }
     else {
       showAlert(json.error, "danger")
