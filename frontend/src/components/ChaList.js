@@ -31,7 +31,9 @@ const ChatList = (props) => {
   const displayMenu = () => {
     setOpenMenu(!openMenu)
   }
-  document.onclick = setOpenMenu(false);
+  if(openMenu){
+    document.onclick = function(){setOpenMenu(false)};
+  }
   const displayDrawer = () => {
     setOpenMenu(false)
     setDrawer(!drawer)
