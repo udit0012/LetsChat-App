@@ -433,9 +433,10 @@
   .formsubhead {
     font-size: 1.5rem;
   }
-  /* .chatcontainer{
-    height: calc(100%-8vh);
-  } */
+  .chatcontainer{
+    /* height: calc(100%-8vh); */
+    position: fixed;
+  }
   .icon-btn{
     width: 14%;
   }
