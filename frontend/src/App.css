@@ -270,6 +270,7 @@
   color: white;
 }
 .chatcontainer{
+  height: 90vh;
   position: relative;
   flex-direction: column;
 }

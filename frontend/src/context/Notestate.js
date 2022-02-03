@@ -10,8 +10,8 @@ const Notestate = (props) => {
     const [chats, setChats] = useState([]);
     const [notification, setNotification] = useState([]);
     const [fetchagain, setFetchagain] = useState(false);
-    // const link = 'http://localhost:8000'
-    const link = 'https://letschat-react-app.herokuapp.com'
+    const link = 'http://localhost:8000'
+    // const link = 'https://letschat-react-app.herokuapp.com'
 
     const fetchuserdata = async () => {
         try {
