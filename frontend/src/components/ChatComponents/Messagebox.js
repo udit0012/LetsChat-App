@@ -106,7 +106,7 @@ const MessageBox = (props) => {
         })
     });
     const typinghandler = (e) => {
-        setNewmessage(e.target.value)
+        setNewmessage(e.target.value.trim())
         if (!socketConnected) return;
         if (!typing) {
             setTyping(true)
@@ -149,9 +149,7 @@ const MessageBox = (props) => {
             </div>
             <form className='msginput w100 disflex' onSubmit={(e) => {
                 e.preventDefault();
-                setNewmessage(newmessage.trim())
-                setNewmessage(newmessage.trimStart())
-                if (newmessage!=="") {
+                if (newmessage.trim()) {
                     sendmessage(newmessage);
                 }
                 else {
