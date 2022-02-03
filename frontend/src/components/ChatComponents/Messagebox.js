@@ -66,8 +66,8 @@ const MessageBox = (props) => {
         }
     }
 
-    const sendmessage = async () => {
-        if (newmessage) {
+    const sendmessage = async (newMessage) => {
+        if (newMessage) {
             setNewmessage("")
             socket.emit("stop typing", selectedchat._id)
             try {
@@ -77,7 +77,7 @@ const MessageBox = (props) => {
                         'Content-Type': "application/json",
                         "auth-token": localStorage.getItem("token")
                     },
-                    body: JSON.stringify({ chatId: selectedchat._id, msg: newmessage })
+                    body: JSON.stringify({ chatId: selectedchat._id, msg: newMessage })
                 })
                 const json = await response.json();
                 socket.emit("newmessage", json)
@@ -150,8 +150,9 @@ const MessageBox = (props) => {
             <form className='msginput w100 disflex' onSubmit={(e) => {
                 e.preventDefault();
                 setNewmessage(newmessage.trim())
-                if (newmessage) {
-                    sendmessage();
+                setNewmessage(newmessage.trimStart())
+                if (!newmessage==="") {
+                    sendmessage(newmessage);
                 }
                 else {
                     setNewmessage("")
