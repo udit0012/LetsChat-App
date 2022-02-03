@@ -69,7 +69,7 @@ const GroupModal = ({ opengroupmodal, groupmodal }) => {
     const appcolor = "black"
     return <div className="dialog" style={{ backgroundColor: "white", zIndex: "20", display: groupmodal ? "block" : "none" }}>
         <div className="disflex" style={{ padding: ".4em", justifyContent: "space-between" }} >
-            <div className='logoname' style={{ marginLeft: ".5em", color: appcolor, fontSize: "2.5rem" }}>Create Group</div>
+            <div className='logoname' style={{ marginLeft: ".5em", color: appcolor, fontSize:isMobile?"2rem": "2.5rem" }}>Create Group</div>
             <button className='usericon closeicon' onClick={opengroupmodal} style={{ padding: ".3em" }}><span className='material-icons' style={{ color: appcolor }}>close</span></button>
         </div>
         <hr />

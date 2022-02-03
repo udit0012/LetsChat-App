@@ -127,7 +127,7 @@ const MessageBox = (props) => {
         }, timerLength);
     }
 
-    return <div className='w100 h100 disflex chatcontainer'>
+    return <div className='w100 h100 disflex chatcontainer' style={{alignItems:isMobile?"flex-start":""}}>
         {selectedchat ? (<>
             <div className="profileheader w100 disflex" style={{ backgroundColor: appcolor, justifyContent: "space-between" }}>
                 <div className='disflex'>
