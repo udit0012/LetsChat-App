@@ -59,7 +59,7 @@
   background-color: var(--appcolor);
   border: none;
   border-radius: 0.3em;
-  padding: 0.6em 1em;
+  padding: 0.4em 1em;
   margin: 0.2em 0;
   font-size: 1.2rem;
   font-weight: bolder;
@@ -109,11 +109,11 @@
 }
 .RegLegForm {
   width: 50%;
-  height: 70%;
+  height: 60%;
   margin-right: 9em;
 }
 .loginContainer .RegLegForm{
-  height: 40%;
+  height: 45%;
 }
 .formsubhead {
   font-size: 2rem;
@@ -419,6 +419,9 @@
   .RegLegForm {
     width: 80%;
     margin-right: 0em;
+  }
+  .loginContainer .RegLegForm{
+    height: 60%;
   }
   .RegLegForm input {
     width: 100%;
