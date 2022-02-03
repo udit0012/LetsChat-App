@@ -106,7 +106,7 @@ const MessageBox = (props) => {
         })
     });
     const typinghandler = (e) => {
-        setNewmessage(e.target.value.trim())
+        setNewmessage(e.target.value)
         if (!socketConnected) return;
         if (!typing) {
             setTyping(true)
