@@ -270,7 +270,6 @@
   color: white;
 }
 .chatcontainer{
-  height: 90vh;
   position: relative;
   flex-direction: column;
 }
@@ -434,9 +433,9 @@
   .formsubhead {
     font-size: 1.5rem;
   }
-  .chatcontainer{
+  /* .chatcontainer{
     height: calc(100%-8vh);
-  }
+  } */
   .icon-btn{
     width: 14%;
   }
@@ -444,7 +443,7 @@
     width: 40%;
   }
   .profileheader{
-    padding: .3em 0;;
+    padding: .6em 0;;
   }
   .profileimg{
     width: 45px;
