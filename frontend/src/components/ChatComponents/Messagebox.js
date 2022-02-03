@@ -8,8 +8,8 @@ import UserProfile from '../Dialogboxes/UserProfile';
 import Spinner from '../loaders/Spinner';
 import ScrollableChat from './ScrollableChat';
 
-const EndPoint = "https://letschat-react-app.herokuapp.com/"
-// const EndPoint = "http://localhost:8000"
+// const EndPoint = "https://letschat-react-app.herokuapp.com/"
+const EndPoint = "http://localhost:8000"
 var socket, selecetdChatCompare;
 
 const MessageBox = (props) => {
@@ -127,7 +127,7 @@ const MessageBox = (props) => {
         }, timerLength);
     }
 
-    return <div className='w100 h100 disflex chatcontainer' style={{alignItems:isMobile?"flex-start":""}}>
+    return <div className='w100 h100 disflex chatcontainer' style={{justifyContent:isMobile?"flex-start":""}}>
         {selectedchat ? (<>
             <div className="profileheader w100 disflex" style={{ backgroundColor: appcolor, justifyContent: "space-between" }}>
                 <div className='disflex'>

@@ -270,7 +270,6 @@
   color: white;
 }
 .chatcontainer{
-  height: calc(100%-6vh);
   position: relative;
   flex-direction: column;
 }
@@ -433,6 +432,9 @@
   }
   .formsubhead {
     font-size: 1.5rem;
+  }
+  .chatcontainer{
+    height: calc(100%-headerHeight);
   }
   .icon-btn{
     width: 14%;
