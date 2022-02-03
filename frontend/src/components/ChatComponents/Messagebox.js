@@ -152,7 +152,7 @@ const MessageBox = (props) => {
             </div>
             <form className='msginput w100 disflex' onSubmit={sendmessage} style={{ backgroundColor: appcolor }}>
                 <div className="inputbox" style={{ width: isMobile ? "90%" : "100%" }}>
-                    <input type="text" className="searchinput" value={newmessage} onChange={typinghandler} placeholder='Type a message' style={{ margin: "0 .4em", padding: '.4em .6em', fontSize:isMobile?"1.2rem": "1.4rem", width: "97%" }} />
+                    <input type="text" className="searchinput" value={setNewmessage(newmessage.trim())} onChange={typinghandler} placeholder='Type a message' style={{ margin: "0 .4em", padding: '.4em .6em', fontSize:isMobile?"1.2rem": "1.4rem", width: "97%" }} />
                 </div>
                 <button className='chatbtn disflex' type='submit' style={{}}><span className="material-icons" style={{ color: "white", fontSize: "2rem" }}>send</span></button>
             </form>
