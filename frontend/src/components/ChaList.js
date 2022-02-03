@@ -1,3 +1,4 @@
+import { body } from 'express-validator';
 import React, { useContext, useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
@@ -24,18 +25,15 @@ const ChatList = (props) => {
   const [openMenu, setOpenMenu] = useState(false);
   const [drawer, setDrawer] = useState(false);
   const opengroupmodal = () => {
+    setOpenMenu(false)
     setGroupmodal(!groupmodal)
   }
   const displayMenu = () => {
     setOpenMenu(!openMenu)
   }
-  if (openMenu) {
-    window.addEventListener("click", function () {
-      setOpenMenu(false)
-    })
-  }
-
+  document.onclick = setOpenMenu(false);
   const displayDrawer = () => {
+    setOpenMenu(false)
     setDrawer(!drawer)
   }
   const fetchchats = async () => {
