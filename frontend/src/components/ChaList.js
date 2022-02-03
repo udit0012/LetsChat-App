@@ -33,7 +33,7 @@ const ChatList = (props) => {
     if(openMenu){
       window.addEventListener("click",displayMenu())
     }
-  }, [openMenu]);
+  }, []);
   
   const displayDrawer = () => {
     setDrawer(!drawer)
