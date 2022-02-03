@@ -9,6 +9,7 @@ import Spinner from '../loaders/Spinner';
 import ScrollableChat from './ScrollableChat';
 
 const EndPoint = "https://letschat-react-app.herokuapp.com/"
+// const EndPoint = "http://localhost:8000"
 var socket, selecetdChatCompare;
 
 const MessageBox = (props) => {
@@ -23,7 +24,7 @@ const MessageBox = (props) => {
     const [room, setRoom] = useState(false);
     const [istyping, setIstyping] = useState(false);
     const [loading, setLoading] = useState(false);
-    const { user, selectedchat, setSelectedchat, showAlert, fetchagain, setFetchagain, notification, setNotification } = useContext(NoteContext)
+    const {link, user, selectedchat, setSelectedchat, showAlert, fetchagain, setFetchagain, notification, setNotification } = useContext(NoteContext)
 
     const onClose = () => {
         setOpendialog(!opendialog)
@@ -48,7 +49,7 @@ const MessageBox = (props) => {
         if (!selectedchat) return;
         try {
             setLoading(true)
-            const response = await fetch(`https://letschat-react-app.herokuapp.com/LetsChatApi/messages/fetchallmessages/${selectedchat._id}`, {
+            const response = await fetch(`${link}/LetsChatApi/messages/fetchallmessages/${selectedchat._id}`, {
                 method: "GET",
                 headers: {
                     'Content-Type': "application/json",
@@ -67,10 +68,12 @@ const MessageBox = (props) => {
 
     const sendmessage = async (eve) => {
         eve.preventDefault()
+        newmessage.trim()
         if (newmessage) {
+            setNewmessage("")
             socket.emit("stop typing", selectedchat._id)
             try {
-                const response = await fetch(`https://letschat-react-app.herokuapp.com/LetsChatApi/messages/sendmessage`, {
+                const response = await fetch(`${link}/LetsChatApi/messages/sendmessage`, {
                     method: "POST",
                     headers: {
                         'Content-Type': "application/json",
@@ -78,7 +81,6 @@ const MessageBox = (props) => {
                     },
                     body: JSON.stringify({ chatId: selectedchat._id, msg: newmessage })
                 })
-                setNewmessage("")
                 const json = await response.json();
                 socket.emit("newmessage", json)
                 setFetchagain(!fetchagain)
@@ -129,18 +131,18 @@ const MessageBox = (props) => {
         {selectedchat ? (<>
             <div className="profileheader w100 disflex" style={{ backgroundColor: appcolor, justifyContent: "space-between" }}>
                 <div className='disflex'>
-                    <img className='profileimg' style={{ marginLeft: "1em", cursor: "pointer" }} src={!selectedchat.isGroupchat ? getSender(user, selectedchat.users).pic : "https://www.pngitem.com/pimgs/m/78-786314_computer-user-icon-peolpe-avatar-group-people-avatar.png"} alt="" />
+                    <img className='profileimg' onClick={!selectedchat.isGroupchat ? onClose : displaygroupdetail} style={{ marginLeft: "1em", cursor: "pointer" }} src={!selectedchat.isGroupchat ? getSender(user, selectedchat.users).pic : "https://www.pngitem.com/pimgs/m/78-786314_computer-user-icon-peolpe-avatar-group-people-avatar.png"} alt="" />
                     <div className='contactinfo' style={{ cursor: "pointer" }}>
-                        <span className='contactname' style={{ fontSize: isMobile ? "2rem" : "1.8rem", color: "white", textTransform: "capitalize" }}>{selectedchat.isGroupchat ? selectedchat.chatname : getSender(user, selectedchat.users).username}</span>
+                        <span className='contactname' style={{ fontSize: isMobile ? "1.4rem" : "1.8rem", color: "white", textTransform: "capitalize" }}>{selectedchat.isGroupchat ? selectedchat.chatname : getSender(user, selectedchat.users).username}</span>
                     </div>
                     {selectedchat.isGroupchat ? (<>
                         {<UpdateGroupModal open={groupdetail} close={displaygroupdetail} />}
                     </>) : <>{<UserProfile open={opendialog} close={onClose} user={getSender(user, selectedchat.users)} />}</>}
                 </div>
                 <div className='disflex' style={{ marginRight: "1em" }}>
-                    {isMobile && <div className='chatbtn disflex' onClick={() => setSelectedchat()}> <span className="material-icons" style={{ fontSize: "2.2rem", fontWeight: "bold", color: "white" }}>
+                    {isMobile && <div className='chatbtn disflex' onClick={() => setSelectedchat()}> <span className="material-icons" style={{ fontSize: "2rem", fontWeight: "bold", color: "white" }}>
                         arrow_back_ios</span> </div>}
-                    <div className='disflex' onClick={!selectedchat.isGroupchat ? onClose : displaygroupdetail} style={{ cursor: "pointer", backgroundColor: "white", padding: ".4em", borderRadius: ".4em" }}><span className="material-icons-outlined" style={{ color: appcolor, fontSize: "2rem" }}>remove_red_eye</span></div>
+                    {/* <div className='disflex' onClick={!selectedchat.isGroupchat ? onClose : displaygroupdetail} style={{ cursor: "pointer", backgroundColor: "white", padding: ".4em", borderRadius: ".4em" }}><span className="material-icons-outlined" style={{ color: appcolor, fontSize: "2rem" }}>remove_red_eye</span></div> */}
                 </div>
             </div>
             <div className='msgbox'>
@@ -149,7 +151,7 @@ const MessageBox = (props) => {
 
             </div>
             <form className='msginput w100 disflex' onSubmit={sendmessage} style={{ backgroundColor: appcolor }}>
-                <div className="inputbox" style={{ width: isMobile ? "80%" : "100%" }}>
+                <div className="inputbox" style={{ width: isMobile ? "90%" : "100%" }}>
                     <input type="text" className="searchinput" value={newmessage} onChange={typinghandler} placeholder='Type a message' style={{ margin: "0 .4em", padding: '.4em .6em', fontSize: "1.4rem", width: "97%" }} />
                 </div>
                 <button className='chatbtn disflex' type='submit' style={{}}><span className="material-icons" style={{ color: "white", fontSize: "2rem" }}>send</span></button>

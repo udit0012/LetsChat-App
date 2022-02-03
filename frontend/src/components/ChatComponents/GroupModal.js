@@ -4,7 +4,7 @@ import NoteContext from '../../context/Notecontext';
 import Spinner from '../loaders/Spinner';
 
 const GroupModal = ({ opengroupmodal, groupmodal }) => {
-    const { chats, setChats, showAlert } = useContext(NoteContext)
+    const { chats, setChats,link, showAlert } = useContext(NoteContext)
     const [chatname, setChatname] = useState();
     const [selectedusers, setSelectedusers] = useState([]);
     const [search, setSearch] = useState("");
@@ -20,7 +20,7 @@ const GroupModal = ({ opengroupmodal, groupmodal }) => {
             return
         }
         try {
-            const response = await fetch("https://letschat-react-app.herokuapp.com/LetsChatApi/chat/group/creategroup", {
+            const response = await fetch(`${link}/LetsChatApi/chat/group/creategroup`, {
                 method: "POST",
                 headers: {
                     'Content-Type': "application/json",
@@ -52,7 +52,7 @@ const GroupModal = ({ opengroupmodal, groupmodal }) => {
             return
         }
         try {
-            const response = await fetch(`https://letschat-react-app.herokuapp.com/LetsChatApi/allusers/user?search=${search}`, {
+            const response = await fetch(`${link}/LetsChatApi/allusers/user?search=${search}`, {
                 method: "GET",
                 headers: {
                     'Content-Type': "application/json",

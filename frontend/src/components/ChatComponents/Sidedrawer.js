@@ -4,7 +4,7 @@ import NoteContext from '../../context/Notecontext';
 import Spinner from '../loaders/Spinner';
 const SideDrawer = (props) => {
     const appcolor = "black"
-    const { user, handledialog, logout, showAlert, chats, setChats, selectedchat, setSelectedchat } = useContext(NoteContext)
+    const {link, showAlert, chats, setChats, setSelectedchat } = useContext(NoteContext)
     const isMobile = useMediaQuery({ query: '(max-width: 700px)' })
     const [search, setSearch] = useState("");
     const [searchresult, setSearchresult] = useState([]);
@@ -19,7 +19,7 @@ const SideDrawer = (props) => {
         }
         try {
             setLoading(true)
-            const response = await fetch(`https://letschat-react-app.herokuapp.com/LetsChatApi/allusers/user?search=${search}`, {
+            const response = await fetch(`${link}/LetsChatApi/allusers/user?search=${search}`, {
                 method: "GET",
                 headers: {
                     'Content-Type': "application/json",
@@ -37,7 +37,7 @@ const SideDrawer = (props) => {
         setSelectedchat()
         try {
             setLoadingchat(true)
-            const response = await fetch(`https://letschat-react-app.herokuapp.com/LetsChatApi/chat/accesschat`, {
+            const response = await fetch(`${link}/LetsChatApi/chat/accesschat`, {
                 method: "POST",
                 headers: {
                     'Content-Type': "application/json",

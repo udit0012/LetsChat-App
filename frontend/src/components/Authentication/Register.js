@@ -7,14 +7,14 @@ import NoteContext from '../../context/Notecontext';
 const Register = () => {
   const navigate = useNavigate()
   const appcolor = "black"
-  const { fetchuserdata, showAlert } = useContext(NoteContext);
+  const { fetchuserdata,link, showAlert } = useContext(NoteContext);
   const istablet = useMediaQuery({ query: "(max-width:1224px" })
   const isMobile = useMediaQuery({ query: '(max-width: 700px)' })
   const [credentials, setCredentials] = useState({ username: "", phoneno: "", email: "", password: "" })
   const { username, phoneno, email, password } = credentials
   const HandleOnSubmit = async (e) => {
     e.preventDefault()
-    const response = await fetch("https://letschat-react-app.herokuapp.com/LetsChatApi/auth/register", {
+    const response = await fetch(`${link}/LetsChatApi/auth/register`, {
       method: "POST",
       headers: {
         'Content-Type': "application/json",

@@ -9,13 +9,13 @@ const Notestate = (props) => {
     const [selectedchat, setSelectedchat] = useState();
     const [chats, setChats] = useState([]);
     const [notification, setNotification] = useState([]);
-
     const [fetchagain, setFetchagain] = useState(false);
-
+    // const link = 'http://localhost:8000'
+    const link = 'https://letschat-react-app.herokuapp.com'
 
     const fetchuserdata = async () => {
         try {
-            const resposne = await fetch("https://letschat-react-app.herokuapp.com/LetsChatApi/auth/getUser", {
+            const resposne = await fetch(`${link}/LetsChatApi/auth/getUser`, {
                 method: "GET",
                 headers: {
                     "Content-type": "application/json",
@@ -67,6 +67,7 @@ const Notestate = (props) => {
         }, 2000);
     }
     return <NoteContext.Provider value={{
+        link,
         fetchagain,
         setFetchagain,
         selectedchat,

@@ -214,7 +214,6 @@
   list-style: none;
   color: var(--appcolor);
   font-size: 1.3rem;
-  font-weight: bold;
   margin: .2em 0;
   padding: .4em .5em;
 }
@@ -271,6 +270,7 @@
   color: white;
 }
 .chatcontainer{
+  height: calc(100%-6vh);
   position: relative;
   flex-direction: column;
 }
@@ -377,6 +377,7 @@
     height: 60%;
   }
   .RegLegBox {
+    height: 70vh;
     width: 70%;
     transform: skewX(-20deg);
   }
@@ -438,5 +439,12 @@
   }
   .icon-btn img{
     width: 40%;
+  }
+  .profileheader{
+    padding: .3em 0;;
+  }
+  .profileimg{
+    width: 45px;
+    height: 45px;
   }
 }

@@ -8,13 +8,13 @@ const Login = () => {
   const navigate = useNavigate()
   const istablet = useMediaQuery({ query: "(max-width:1224px" })
   const [credentials, setCredentials] = useState({ emailphone: "", password: "" })
-  const { showAlert, fetchuserdata } = useContext(NoteContext)
+  const { showAlert, fetchuserdata,link } = useContext(NoteContext)
   const appcolor = "black"
   const isMobile = useMediaQuery({ query: '(max-width: 700px)' })
 
   const HandleOnSubmit = async (e) => {
     e.preventDefault()
-    const response = await fetch("https://letschat-react-app.herokuapp.com/LetsChatApi/auth/login", {
+    const response = await fetch(`${link}/LetsChatApi/auth/login`, {
       method: "POST",
       headers: {
         'Content-Type': "application/json",

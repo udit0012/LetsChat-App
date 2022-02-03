@@ -8,7 +8,7 @@ const UserProfile = ({user,open,close}) => {
          <div className="dialog" style={{position:"absolute",left:"0",zIndex: "20", display: open ? "block" : "none" }}>
             <div className="dialogbox">
                 <div className="disflex" style={{ padding: ".4em", justifyContent: "space-between" }} >
-                    <div className='logoname' style={{ marginLeft: ".5em", color: appcolor, fontSize: "2.5rem" }}>User profile</div>
+                    <div className='logoname' style={{ marginLeft: ".5em", color: appcolor, fontSize:isMobile?"2rem": "2.5rem" }}>User profile</div>
                     <button className='usericon closeicon' onClick={close} style={{ padding: ".3em" }}><span className='material-icons' style={{ color: appcolor }}>close</span></button>
                 </div>
                 <hr />
