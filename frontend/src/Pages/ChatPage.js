@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar';
 
 const ChatPage = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 700px)' })
-    return <div className='w100 disflex' style={{ height:isMobile?"100%":"99.9vh", flexDirection: "column" }}>
+    return <div className='w100 disflex' style={{ height:isMobile?"92vh":"99.9vh", flexDirection: "column",position:isMobile?'fixed':"relative" }}>
         {localStorage.getItem("user") ? <>{!isMobile && <Navbar />}
             <div className='disflex w100' style={{ borderTop: isMobile ? "" : "1px solid white", height: isMobile ? "100%" : "93%" }}>
                 <ChatList />

@@ -435,7 +435,6 @@
   }
   .chatcontainer{
     /* height: calc(100%-8vh); */
-    position: fixed;
   }
   .icon-btn{
     width: 14%;
