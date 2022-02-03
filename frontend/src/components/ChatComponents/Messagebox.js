@@ -24,7 +24,7 @@ const MessageBox = (props) => {
     const [room, setRoom] = useState(false);
     const [istyping, setIstyping] = useState(false);
     const [loading, setLoading] = useState(false);
-    const {link, user, selectedchat, setSelectedchat, showAlert, fetchagain, setFetchagain, notification, setNotification } = useContext(NoteContext)
+    const { link, user, selectedchat, setSelectedchat, showAlert, fetchagain, setFetchagain, notification, setNotification } = useContext(NoteContext)
 
     const onClose = () => {
         setOpendialog(!opendialog)
@@ -34,12 +34,12 @@ const MessageBox = (props) => {
         socket.emit("setup", user)
         socket.on("connected", () => setSocketConnected(true))
         socket.on("typing", (room1) => {
-            
+
             setRoom(room1)
             setIstyping(true)
         })
         socket.on("stop typing", (room) => {
-             setIstyping(false)
+            setIstyping(false)
         })
     }, []);
     const displaygroupdetail = () => {
@@ -66,9 +66,7 @@ const MessageBox = (props) => {
         }
     }
 
-    const sendmessage = async (eve) => {
-        eve.preventDefault()
-        setNewmessage(newmessage.trim())
+    const sendmessage = async () => {
         if (newmessage) {
             setNewmessage("")
             socket.emit("stop typing", selectedchat._id)
@@ -109,7 +107,6 @@ const MessageBox = (props) => {
     });
     const typinghandler = (e) => {
         setNewmessage(e.target.value)
-
         if (!socketConnected) return;
         if (!typing) {
             setTyping(true)
@@ -150,9 +147,19 @@ const MessageBox = (props) => {
                     <ScrollableChat messages={messages} room={room} typing={istyping} />}
 
             </div>
-            <form className='msginput w100 disflex' onSubmit={sendmessage} style={{ backgroundColor: appcolor }}>
+            <form className='msginput w100 disflex' onSubmit={(e) => {
+                e.preventDefault();
+                setNewmessage(newmessage.trim())
+                if (newmessage) {
+                    sendmessage();
+                }
+                else {
+                    setNewmessage("")
+                    showAlert("Message cannot be empty", "warning")
+                }
+            }} style={{ backgroundColor: appcolor }}>
                 <div className="inputbox" style={{ width: isMobile ? "90%" : "100%" }}>
-                    <input type="text" className="searchinput" value={setNewmessage(newmessage.trim())} onChange={typinghandler} placeholder='Type a message' style={{ margin: "0 .4em", padding: '.4em .6em', fontSize:isMobile?"1.2rem": "1.4rem", width: "97%" }} />
+                    <input type="text" className="searchinput" value={newmessage} onChange={typinghandler} placeholder='Type a message' style={{ margin: "0 .4em", padding: '.4em .6em', fontSize: isMobile ? "1.2rem" : "1.4rem", width: "97%" }} />
                 </div>
                 <button className='chatbtn disflex' type='submit' style={{}}><span className="material-icons" style={{ color: "white", fontSize: "2rem" }}>send</span></button>
             </form>
