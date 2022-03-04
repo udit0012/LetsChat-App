@@ -50,6 +50,14 @@ const ChatList = (props) => {
     }
   }
   useEffect(() => {
+    if(openMenu){
+      setTimeout(() => {
+        setOpenMenu(false)
+      }, 5000);
+    }
+  }, [openMenu])
+  
+  useEffect(() => {
     setLoggedUser(JSON.parse(localStorage.getItem("user")))
     fetchchats();
   }, [fetchagain]);
