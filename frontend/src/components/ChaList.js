@@ -87,7 +87,7 @@ const ChatList = (props) => {
               <div type="text" className="searchinput" >Search or start new chat</div>
             </div>
           </div>}
-          {chats ? (<div className='w100 disflex' style={{ justifyContent: "flex-end", flexDirection: "column-reverse", height: "93%", overflow: "auto" }}>
+          {chats ? (<div className='w100 disflex' style={{ justifyContent: "flex-end", flexDirection: "column-reverse", height: "93vh", overflowY: "scroll" }}>
             {chats?.map((chat) => {
               return <div key={chat._id} onClick={() => { setSelectedchat(chat); }} className='contactCard' style={selectedchat === chat ? { backgroundColor: appcolor, color: "white" } : {}}>
                 <img className='profileimg' src={!chat.isGroupchat ? getSender(user, chat.users).pic : "https://www.pngitem.com/pimgs/m/78-786314_computer-user-icon-peolpe-avatar-group-people-avatar.png"} alt="" />

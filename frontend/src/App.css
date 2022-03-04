@@ -200,7 +200,7 @@
 }
 .topbar{
   justify-content: flex-start;
-  height: 8%;
+  height: 8vh;
 }
 .topbarHead{
   font-family: "PT Sans Narrow", sans-serif;
@@ -474,5 +474,11 @@
   .profileimg{
     width: 45px;
     height: 45px;
+  }
+  .msgText{
+    margin: .1em .3em;
+    padding: .3em .8em;
+    font-size: 1rem;
+    border-radius: .9em;
   }
 }
