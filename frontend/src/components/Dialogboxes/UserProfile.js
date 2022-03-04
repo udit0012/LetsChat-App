@@ -12,7 +12,7 @@ const UserProfile = ({user,open,close}) => {
                     <button className='usericon closeicon' onClick={close} style={{ padding: ".3em" }}><span className='material-icons' style={{ color: appcolor }}>close</span></button>
                 </div>
                 <hr />
-                {localStorage.getItem("user") &&<div className='userdetails disflex' style={{flexDirection:"column"}}>
+                {localStorage.getItem("user") &&<div className='userdetails disflex' style={{flexDirection:"column",marginBottom:"1em"}}>
                         <img style={{ width:isMobile?"30%" :"20%", height:isMobile?"30%" :"20%", borderRadius: "50%" }} src={user.pic} alt="" />
                         <div className='detail name' style={{textTransform:"capitalize"}}> {user.username}</div>
                         <div className='detail'> {user.email}</div>

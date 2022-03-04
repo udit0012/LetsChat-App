@@ -37,7 +37,7 @@ const Navbar = () => {
                         <span>{d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}</span>
                     </div>
                 </div>}
-                <Link to="/" className="logoname w100 h100 disflex" style={{ justifyContent: isMobile ? "start" : "center", marginLeft: isMobile ? ".2em" : "0", fontSize: "2rem" }}>
+                <Link to="/" className="logoname w100 h100 disflex" style={{ justifyContent: isMobile ? "start" : "center", marginLeft: isMobile ? ".5em" : "0" }}>
                     <span className="logoname" style={{ color: "white" }}>Lets Chat</span>
                 </Link>
                 <div className="w100 h100 disflex" style={{ justifyContent: isMobile ? "end" : "center", marginRight: isMobile ? ".7em" : "2.5em", color: "white" }}>

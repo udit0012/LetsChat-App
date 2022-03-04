@@ -84,15 +84,13 @@
 }
 .RegLegContainer {
   width: 70%;
+  margin: 3em auto;
   height: 70vh;
   display: flex;
   border-radius: 1em;
   overflow: hidden;
   box-shadow: 5px 5px 20px black;
   position: relative;
-  left: 50%;
-  top: 48%;
-  transform: translate(-50%, -50%);
 }
 .RegLegBox {
   width: 60%;
@@ -110,7 +108,8 @@
 .RegLegForm {
   width: 50%;
   height: 60%;
-  margin-right: 9em;
+  margin: 0 auto;
+  padding-left: 2em;
 }
 .loginContainer .RegLegForm{
   height: 45%;
@@ -129,7 +128,7 @@
 }
 .registerInput {
   width: 100%;
-  margin: 0.4em 0;
+  margin: .5em 0;
   border-radius: 0.2em;
   border: 1px solid var(--appcolor);
   display: flex;
@@ -147,6 +146,9 @@
 .RegInput::placeholder {
   color: #191919
 }
+.submitbtn{
+  margin-top: 1em;
+}
 .dialog{
   width: 100%;
   height: 100%;
@@ -156,7 +158,6 @@
 }
 .dialogbox{
   width: 40%;
-  height: 45%;
   left: 50%;
   top: 50%;
   position: relative;
@@ -167,6 +168,10 @@
 .userdetails{
   color: black;
   padding: .5em 0;
+  margin-bottom: 1em;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow-y: scroll;
 }
 .userdetails .detail{
   font-size: 1.5rem;
@@ -351,83 +356,104 @@
 }
 
 .icon-btn{
-  width: 3.5%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
-  padding: .8em 0;
-  margin: 0 .3em;
+  padding: .6em .7em;
+  margin: 0 1em;
   border-radius: 50%;
   cursor: pointer;
   transition: .2s;
 }
 .icon-btn img{
-  width: 50%;
-  height: 50%;
+  width: 30px;
 }
 .icon-btn:hover{
   background-color: #d6d6d6;
 }
 @media screen and (max-width: 1224px) {
+  .logoname{
+    font-size: 2.4rem;
+  }
+  .formsubhead{
+    font-size: 1.7rem;
+  }
   .dialogbox{
-    width: 70%;
-    height: 45%;
+    width: 90%;
+    height: auto;
   }
   .RegLegContainer {
     width: 95%;
     height: 60vh;
   }
   .RegLegBox {
-    height: 100%;
-    width: 70%;
     transform: skewX(-20deg);
-  }
-  .RegLegForm {
-    margin-right: 6em;
   }
   .RegLegImage{
     width: 20%;
   }
   .icon-btn{
-    width: 6%;
-    padding: .7em;
+    padding: .6em .7em;
+  }
+  .icon-btn img{
+    width: 25px;
   }
 }
 @media screen and (max-width: 700px) {
   .dialogbox{
     width: 100%;
     height: 100%;
+    left: 00%;
+    top: 00%;
+    position: relative;
+    transform: translate(0%,0%);
+    border-radius: 0;
   }
   .userdetails .name{
     font-size: 2rem;
   }
   .lbtn{
-    font-size: 1.2rem;
+  border-radius: 0.2em;
+  padding: 0.3em .6em;
+  margin: 0.2em 0;
+  font-size: 1.1rem;
   }
   .RegLegContainer {
-    width: 95%;
-    height: 65vh;
+    width: 100%;
+    height: 100%;
+    margin-top: 5em;
+    padding: 2em 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
   }
   .RegLegBox {
     width: 100%;
     display: flex;
+    background-color: transparent;
+    backdrop-filter: none;
     justify-content: center;
     align-items: center;
     transform: skewX(0deg);
   }
   .RegLegForm {
     width: 80%;
-    margin-right: 0em;
-  }
-  .loginContainer .RegLegForm{
-    height: 60%;
+    margin: 0 auto;
+    padding-left: 0;
   }
   .RegLegForm input {
     width: 100%;
   }
+  .RegInput{
+    font-size: 1rem;
+    padding: .7em .5em;
+  }
+  .submitbtn{
+    margin-top: 1em;
+  }
   .logoname {
-    font-size: 2rem;
+    font-size: 1.7rem;
     justify-content: flex-start;
   }
   .reglogbtn {
@@ -439,11 +465,8 @@
   .chatcontainer{
     /* height: calc(100%-8vh); */
   }
-  .icon-btn{
-    width: 14%;
-  }
   .icon-btn img{
-    width: 40%;
+    width: 20px;
   }
   .profileheader{
     padding: .6em 0;;

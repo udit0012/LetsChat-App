@@ -1,13 +1,10 @@
-import { body } from 'express-validator';
 import React, { useContext, useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { Link } from 'react-router-dom';
 import NoteContext from '../context/Notecontext';
 import GroupModal from './ChatComponents/GroupModal';
 import SideDrawer from './ChatComponents/Sidedrawer';
 import { getSender } from './config/ChatLogic';
 import UserProfile from './Dialogboxes/UserProfile';
-import Spinner from './loaders/Spinner';
 
 const ChatList = (props) => {
   const appcolor = "black"

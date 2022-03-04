@@ -9,19 +9,19 @@ import { useMediaQuery } from 'react-responsive';
 const Footer = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 700px)' })
   const istablet = useMediaQuery({ query: "(max-width:1224px" })
-    return <div className='footer disflex' style={{flexDirection:"column", height:isMobile?"30vh": "60vh" }}>
-        <div style={{width:"90%",margin:isMobile?"2em":"3em"}}>
-            {!isMobile && <><div className='registerInput' style={{ border: "1px solid white" }}>
+    return <div className='footer disflex' style={{flexDirection:"column"}}>
+        <div style={{width:"90%",margin:isMobile?"1.2em 0":"3em 0"}}>
+             <><div className='registerInput' style={{width:isMobile?"":"50%", border: "1px solid white" }}>
                 <input className='RegInput' style={{ width: "90%" }} type="text" placeholder='Email or Phone no.' name="emailphone" />
                 <span className="material-icons disflex" style={{ color: "white", justifyContent: 'flex-end', margin: "0 1em" }}>arrow_forward</span>
             </div>
-            <div className='disflex' style={{justifyContent:"flex-start",margin:"1em 0"}}>
+            {!isMobile && <div className='disflex' style={{justifyContent:"flex-start",margin:"1em 0"}}>
                 <button className='lbtn'>Features</button>
                 <button className='lbtn'>LetsChat</button>
                 <button className='lbtn'>Blog</button>
                 <button className='lbtn'>Servics</button>
-            </div></>}
-            <div className='disflex' style={{justifyContent:isMobile?"center":"flex-start"}}>
+            </div>}</>
+            <div className='disflex' style={{justifyContent:isMobile?"center":"flex-start",marginTop:'2em'}}>
                 <Link className='icon-btn' to="/" style={{border:"1px solid white"}}><img src={facebook} alt="" /></Link>
                 <Link className='icon-btn' to="/" style={{border:"1px solid white"}}><img src={instagram} alt="" /></Link>
                 <Link className='icon-btn' to="/" style={{border:"1px solid white"}}><img src={twitter} alt="" /></Link>

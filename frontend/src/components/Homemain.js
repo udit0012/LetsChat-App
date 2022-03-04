@@ -12,7 +12,7 @@ const Homemain = () => {
     const lightappcolor = "#999999"
 
     return <div className='w100 disflex' style={{
-        height: "70vh",
+        padding:"1em 0",
         backgroundColor: lightappcolor,
     }}>
         <div className='disflex' style={{

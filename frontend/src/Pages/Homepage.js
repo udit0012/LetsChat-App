@@ -16,7 +16,7 @@ const Homepage = () => {
     if (user) navigate("/LetsChat");
   }, [navigate]);
   return <div>
-      <div className="mainbody w100 h100" style={{width:"99.9vw"}}>
+      <div className="mainbody w100 h100">
             <Navbar />
             <Homemain />
             <About />

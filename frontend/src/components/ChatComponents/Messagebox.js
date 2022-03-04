@@ -143,9 +143,8 @@ const MessageBox = (props) => {
                 </div>
             </div>
             <div className='msgbox'>
-                {loading ? (<Spinner simple={false} big={true} />) :
+                {loading ? (<div className="w100 h100 disflex"><Spinner simple={false} big={false} /></div>) :
                     <ScrollableChat messages={messages} room={room} typing={istyping} />}
-
             </div>
             <form className='msginput w100 disflex' onSubmit={(e) => {
                 e.preventDefault();

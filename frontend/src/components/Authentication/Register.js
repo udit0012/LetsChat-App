@@ -3,6 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import { Link, useNavigate } from 'react-router-dom';
 import VideoCall from "../images/messaging.png"
 import NoteContext from '../../context/Notecontext';
+import Footer from '../miscellaneous/Footer';
 
 const Register = () => {
   const navigate = useNavigate()
@@ -39,14 +40,14 @@ const Register = () => {
   }
 
   return (
-    <div style={{ width: "99.9vw", height:isMobile?"92vh": "99.9vh", fontFamily: "'PT Sans Narrow', sans-serif" }}>
-      <div style={{ display: "flex" }}>
+    <div style={{ width: "99.9vw", fontFamily: "'PT Sans Narrow', sans-serif" }}>
+      <div style={{ display: "flex",paddingTop:".4em" }}>
         <Link to="/" className='logoname disflex' style={{ width: "100%", color: appcolor, marginLeft: ".4em" }}>Lets Chat</Link>
         <div className='disflex reglogbtn' style={{ width: "100%", justifyContent: isMobile ? "end" : "center", marginRight: ".4em" }}><Link className='lbtn lbtnOutline ' to="/login">Login</Link></div>
       </div>
-      <div className="RegLegContainer" style={{
+      <div className="RegLegContainer" style={!isMobile?{
         backgroundColor: appcolor
-      }}>
+      }:{}}>
         <div className='RegLegBox'>
           <form className='RegLegForm' style={{ transform: isMobile ? "skewX(0deg)" : "skewX(20deg)" }} autoComplete='off' action="post" onSubmit={HandleOnSubmit}>
             <div className='logoname' style={{ color: appcolor }}>Lets Chat</div>
@@ -65,6 +66,7 @@ const Register = () => {
           <img style={{ width: istablet ? "200%" : "100%", marginRight: "2em" }} src={VideoCall} alt="" />
         </div>}
       </div>
+      <Footer />
     </div>
   )
 };

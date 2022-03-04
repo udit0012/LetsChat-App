@@ -30,7 +30,7 @@ function About() {
     return (
         <div className='w100' style={{display: "flex", justifyContent: "center", fontFamily: "'PT Sans Narrow', sans-serif" }}>
             <div className="getstart" style={{ width:istablet?"100%": "60%",margin:"1em 0" }}>
-                <div style={{display:"flex",justifyContent:'center',fontSize:"3rem",margin:'.5em 0'}}>About Lets Chat</div>
+                <div style={{display:"flex",justifyContent:'center',fontSize:isMobile?"2.3rem":"3rem",margin:'.5em 0'}}>About Lets Chat</div>
                 <div className="cards w100" style={{ display: "flex", justifyContent: "center", alignItems: "center", flexWrap: "wrap" }}>
 
                     {about.map((ele,index) => {
