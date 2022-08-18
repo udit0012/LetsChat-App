@@ -20,7 +20,9 @@ const server = app.listen(port, () => {
 })
 if(process.env.NODE_ENV==="production"){
     app.use(express.static("./frontend/build"));
-
+    app.get("*",(req,res)=>{
+        res.sendFile(path.resolve(_dirname,"frontend","build","index.html"));
+    })
 }
 const io = require("socket.io")(server, {
     pingTimeout: 60000,
