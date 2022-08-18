@@ -1,0 +1,250 @@
+.chatContainer {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  position: relative;
+}
+.chatContainer::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #ffe5ea;
+  position: absolute;
+  z-index: -1;
+}
+.chatList {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background: transparent;
+  height: 85%;
+  margin-top: 4.5rem;
+  position: relative;
+  flex-direction: column;
+}
+.chatlist_box {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+}
+.chatlist_headbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chatlist_head {
+  font-family: "PT Sans Narrow", sans-serif;
+  color: black;
+  pointer-events: none;
+}
+.chatlist_head1 {
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+.chatlist_head2 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.chatlist_btn {
+  border: none;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(to right, #ff6b95, #ff0048);
+}
+.chatlist_btn span {
+  margin-right: 0.25rem;
+}
+.chatlist_btn:hover {
+  background: #b80034;
+}
+.chatlist_mobile_search{
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+}
+.chatlist_container {
+  width: 100%;
+  height: 91%;
+}
+.chatlist_absolutebox {
+  width: 100%;
+  height: 100%;
+}
+.chatlist_search {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  margin: 0.5rem 0;
+}
+.chatlist_search span{
+  cursor: pointer;
+}
+.chatlist_searchInput {
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.chatlist_latestchats {
+  overflow: auto;
+  height: 92%;
+}
+.chatlist_latestchats_list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.chatlist_contactCard {
+  width: 100%;
+  display: flex;
+  background: white;
+  padding: 1.1rem 0;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 0.5rem auto;
+  border-radius: 0.5rem;
+}
+.chatlist_contactCard:hover {
+  background: linear-gradient(to right, #ff6b95, #ff0048);
+  color: white;
+}
+.contactCard_img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 1.5rem;
+}
+.contactCard_info{
+  width: 65%;
+  align-self: center;
+}
+.contactCard_name{
+  width: 100%;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  padding: .25rem 0;
+}
+.contactCard_msgtext{
+  color: rgb(109, 109, 109);
+  margin-top: .1em;
+  font-size: 1.1rem;
+  padding: .25rem 0;
+}
+.chatlist_contactCard:hover .contactCard_msgtext{
+  color: white;
+}
+.chatlist_latestchats::-webkit-scrollbar {
+  width: 4px;
+}
+.chatlist_latestchats::-webkit-scrollbar-track {
+  border-radius: 0.5rem;
+}
+.chatlist_latestchats::-webkit-scrollbar-thumb {
+  background: #ff0048;
+  display: none;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+}
+.chatlist_latestchats::-webkit-scrollbar-thumb:hover {
+  background: #b80034;
+}
+.chatlist_latestchats:hover::-webkit-scrollbar-thumb {
+  display: block;
+}
+
+.chatbox {
+  display: flex;
+  height: 85%;
+  margin-top: 4.5rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (max-width:1268px){
+  .chatContainer{
+    grid-template-columns: 50% 50%;
+  }
+  .chatlist_box{
+    width: 90%;
+  }
+  .chatlist_head1{
+    font-size: 2rem;
+  }
+  .chatlist_btn{
+    padding: .7rem .7rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .chatContainer{
+    grid-template-columns: 100%;
+  }
+  .chatList {
+    height: 100%;
+    margin-top: 0;
+  }
+  .chatlist_container {
+    height: 92%;
+  }
+  .chatlist_headbar{
+    padding: 1rem 0;
+  }
+  .chatlist_head {
+    padding: 0 1.25rem;
+  }
+  .chatlist_search{
+    display: none;
+  }
+  .chatlist_mobile_search{
+    display: flex;
+  }
+  .chatlist_mobile_search span{
+    color: rgb(129, 129, 129);
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0 .25rem;
+    margin: 0 1rem;
+  }
+  .chatlist_head1 {
+    font-size: 2rem;
+  }
+  .chatlist_head2 {
+    display: none;
+  }
+  .chatbox {
+    height: 100%;
+    margin-top: 0;
+  }
+  .chatlist_contactCard {
+    padding: .75rem 0;
+    margin: 0.5rem auto;
+  }
+  .contactCard_img {
+    width: 40px;
+    height: 40px;
+    margin: 0 .75rem;
+  }
+  .contactCard_info{
+    width: 80%;
+  }
+  .contactCard_name{
+    font-size: 1.2rem;
+  }
+  .contactCard_msgtext{
+    margin-top: .1rem;
+    font-size: 1rem;
+  }
+  .chatlist_latestchats {
+    height: 95%;
+  }
+}

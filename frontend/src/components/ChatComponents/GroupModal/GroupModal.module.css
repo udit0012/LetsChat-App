@@ -1,0 +1,219 @@
+.dialog_box {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  background: #ffe5ea;
+}
+.dialog_headbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dialog_head {
+  font-family: "PT Sans Narrow", sans-serif;
+  color: black;
+  pointer-events: none;
+}
+.dialog_head1 {
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+.dialog_headbtn {
+  margin: 0.25rem 0.2rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.dialog_form {
+  width: 100%;
+  padding: 0.5rem 0.25rem;
+}
+.dialog_inputbox {
+  border-bottom: 2px solid #9e9e9e;
+  margin: 1rem 0;
+}
+.dialog_input {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1.3rem;
+  width: 90%;
+}
+.dialog_btn {
+  border: none;
+  outline: none;
+  background: #ff0048;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.dialog_btn:hover {
+  background: #b30e3d;
+}
+.dialog_selectedbox {
+  max-height: 9rem;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+}
+.dialog_absolutebox {
+  display: flex;
+  overflow-x: auto;
+}
+.dialog_selectedCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin: 0.25rem 0.25rem;
+}
+.selectedCard_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 0.75rem;
+}
+.selectedCard_icons {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  position: absolute;
+  top: 0;
+  right: -0.25rem;
+  cursor: pointer;
+  background: #ff0048;
+  border-radius: 50%;
+  padding: 0.1rem 0.35rem;
+}
+.dialog_contacts {
+  overflow: auto;
+  max-height: 53%;
+}
+.dialog_contactslist {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.dialog_contacts::-webkit-scrollbar {
+  width: 4px;
+}
+.dialog_contacts::-webkit-scrollbar-track {
+  border-radius: 0.5rem;
+}
+.dialog_contacts::-webkit-scrollbar-thumb {
+  background: #a8a8a8;
+  display: none;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+}
+.dialog_contacts:hover::-webkit-scrollbar-thumb {
+  display: block;
+}
+.dialog_contactCard {
+  width: 100%;
+  display: flex;
+  background: white;
+  padding: 1.1rem 0;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 0.5rem auto;
+  border-radius: 0.5rem;
+}
+.dialog_contactCard:hover {
+  background: linear-gradient(to right, #ff6b95, #ff0048);
+  color: white;
+}
+.contactCard_img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 1.5rem;
+}
+.contactCard_info {
+  width: 65%;
+  align-self: center;
+}
+.contactCard_name {
+  width: 100%;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  padding: 0.25rem 0;
+}
+.contactCard_phoneno {
+  color: rgb(109, 109, 109);
+  margin-top: 0.1em;
+  font-size: 1.1rem;
+  padding: 0.25rem 0;
+}
+.dialog_contactCard:hover .contactCard_phoneno {
+  color: white;
+}
+@media screen and (max-width: 1268px) {
+  .chatContainer {
+    grid-template-columns: 50% 50%;
+  }
+  .dialog_box {
+    width: 90%;
+  }
+  .dialog_head1 {
+    font-size: 2rem;
+  }
+  .dialog_btn {
+    padding: 0.7rem 0.7rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dialog_headbar {
+    padding: 1rem 0;
+  }
+  .dialog_head {
+    padding: 0 1.25rem;
+  }
+  .dialog_head1 {
+    font-size: 2rem;
+  }
+  .dialog_form {
+    padding: 0.25rem 0.25rem;
+  }
+  .dialog_inputbox {
+    margin: .5rem 0;
+  }
+  .dialog_input {
+    padding: 0.5rem 0.5rem;
+    font-size: 1.1rem;
+  }
+  .dialog_btn{
+      font-size: 1rem;
+      margin: 0.5rem 0;
+  }
+  .dialog_contactCard {
+    padding: 0.75rem 0;
+    margin: 0.5rem auto;
+  }
+  .contactCard_img {
+    width: 40px;
+    height: 40px;
+    margin: 0 0.75rem;
+  }
+  .contactCard_info {
+    width: 80%;
+  }
+  .contactCard_name {
+    font-size: 1.2rem;
+  }
+  .contactCard_phoneno {
+    margin-top: 0.1rem;
+    font-size: 1rem;
+  }
+  .dialog_contacts {
+    height: 95%;
+  }
+}

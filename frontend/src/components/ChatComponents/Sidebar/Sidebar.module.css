@@ -1,0 +1,199 @@
+.chatPage {
+  height: 100%;
+}
+.chat_container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  position: relative;
+  overflow: hidden;
+}
+.sidebar {
+  background-color: white;
+  color: black;
+  padding: 3rem 0;
+  box-shadow: 0 0 20px rgb(131, 131, 131);
+  transition: .2s;
+}
+.sidebar_container {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.imgbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.profileimg {
+  width: 6rem;
+  padding: 1.5rem;
+}
+.username {
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+.sidebar_options {
+  list-style: none;
+  padding: 3rem 0;
+}
+.sidebar_option {
+  margin: 0.9rem 0;
+  padding: 0.8rem 0;
+  transition: 0.2s;
+  border-left: 0.25rem solid transparent;
+}
+.sidebar_link {
+  color: rgb(121, 121, 121);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.sidebar_link span {
+  font-size: 1.6rem;
+  transition: 0.2s;
+  padding-left: 3rem;
+  padding-right: 2rem;
+}
+.logout {
+  padding: 1rem 0;
+}
+.sidebar_option:hover {
+  border-left: 4px solid #ff0048;
+}
+.sidebar_option:hover .sidebar_link {
+  color: #ff0048;
+}
+.logout .sidebar_link:hover {
+  color: #ff0048;
+}
+.sidebar_menubtn {
+  border: none;
+  outline: none;
+  background: transparent;
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+  color: rgb(122, 122, 122);
+  /* display: flex; */
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 1.2rem;
+  position: absolute;
+  right: -1.9rem;
+  top: 0;
+  margin: 1rem 0;
+}
+.sidebar_menubtn i {
+    margin: .25rem;
+}
+.sidebar_menubtn::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transform: rotateZ(45deg);
+    border-radius: 1rem;
+    z-index: -1;
+}
+@media screen and (max-width: 1468px) {
+  .chat_container {
+    grid-template-columns: 9% 91%;
+  }
+  .sidebar {
+    width: 9rem;
+    overflow: hidden;
+  }
+  .profileimg {
+    width: 6 rem;
+  }
+  .username {
+    font-size: 1rem;
+  }
+  .sidebar_link {
+    flex-direction: column;
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+  .sidebar_link span {
+    font-size: 1.3rem;
+    padding: 0 3rem;
+  }
+}
+@media screen and (max-width: 1268px) {
+  .chat_container {
+    grid-template-columns: 100%;
+  }
+  .sidebar {
+    position: absolute;
+    z-index: 1000;
+    height: 90%;
+    width: 16rem;
+    overflow: visible;
+  }
+  .imgbox {
+    width: auto;
+    align-items: flex-start;
+    padding: 0 2rem;
+  }
+  .profileimg {
+    width: 4rem;
+    padding: 1.5rem 1rem;
+  }
+  .username {
+    font-size: 1.3rem;
+  }
+  .sidebar_link {
+    flex-direction: row;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+  }
+  .sidebar_link span {
+    font-size: 1.4rem;
+    padding-left: 1.25rem;
+    padding-right: .75rem;
+  }
+}
+@media screen and (max-width:768px) {
+  .sidebar{
+    width: 13rem;
+    padding: .75rem 0;
+    height: 97%;
+  }
+  .sidebar_menubtn{
+    margin: 0.25rem 0;
+  }
+  .profileimg {
+    width: 3rem;
+    padding: .5rem 1rem;
+  }
+  .username{
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  .sidebar_options{
+    padding: 1rem 0;
+  }
+  .sidebar_option {
+    margin: 0.5rem 0;
+    padding: 0.75rem 0;
+  }
+  .sidebar_link {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .sidebar_link span {
+    font-size: 1.3rem;
+  }
+}

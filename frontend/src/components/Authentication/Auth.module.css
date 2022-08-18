@@ -1,0 +1,123 @@
+.Auth_page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.Auth_page::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/public/loginBackground.jpg");
+  z-index: -1;
+}
+.Auth_box {
+  background-color: transparent;
+  border: 1px solid #ff0048;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+.Auth_form {
+  color: #ff0048;
+}
+.form_head {
+  font-size: 1.8rem;
+  color: #ff0048;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.form_field {
+  width: 90%;
+  margin-bottom: 2rem;
+  border-radius: 4rem;
+  padding: 0.25rem 1rem;
+  border: 1px solid #ff0048;
+  display: flex;
+  align-items: center;
+}
+.form_label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.form_input {
+  padding: 0.5em 0.5em;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  width: 90%;
+  outline: none;
+  background-color: transparent;
+  color: #ff0048;
+}
+.form_input::placeholder {
+  color: #8a4a5c;
+}
+.form_link {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.form_link a {
+  margin-left: 0.25rem;
+  color: rgb(90, 203, 255);
+  text-decoration: none;
+}
+.form_btn {
+  text-transform: uppercase;
+  border: 2px solid #ff0048;
+  margin: 2rem 0;
+  padding: 0.75rem 0;
+  border-radius: 5rem;
+  text-align: center;
+  width: 100%;
+  transition: 0.2s;
+  font-size: 1.2rem;
+  font-weight: bold;
+  outline: none;
+  color: white;
+  background: #ff0048;
+  cursor: pointer;
+}
+.form_btn:hover {
+  background-color: #bb0035;
+}
+
+@media screen and (max-width: 768px) {
+  .Auth_page {
+    flex-direction: column;
+    padding: 0;
+  }
+  .Auth_box {
+    margin: 0 1rem;
+    padding: 2rem;
+    border: none;
+  }
+  .form_head {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+  .form_label {
+    margin-top: 1.5rem;
+  }
+  .form_field {
+    margin-bottom: 1rem;
+  }
+  .form_input {
+    font-size: 1rem;
+  }
+  .form_btn {
+    font-size: 1rem;
+  }
+}

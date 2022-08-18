@@ -1,0 +1,159 @@
+.searchDrawer {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  background: #ffe5ea;
+}
+.searchDrawer_container {
+  width: 100%;
+  height: 91%;
+}
+.searchDrawer_absolutebox {
+  width: 100%;
+  height: 100%;
+}
+.searchDrawer_search {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 0.75rem 0;
+  padding-left: 1rem;
+  border-radius: 0.25rem;
+  margin: 0.5rem 0;
+}
+.searchDrawer_search span {
+  cursor: pointer;
+  color: rgb(122, 122, 122);
+}
+.searchDrawer_searchInput {
+  margin: 0 0.5rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.2rem;
+  max-width: 70%;
+}
+.search_btn {
+  border: none;
+  outline: none;
+  border-left: 1px solid rgb(122, 122, 122);
+  background: transparent;
+  color: rgb(122, 122, 122);
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 1rem;
+}
+.searchDrawer_searchchats {
+  overflow: auto;
+  height: 92%;
+}
+.searchDrawer_searchchats_list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.searchDrawer_contactCard {
+  width: 100%;
+  display: flex;
+  background: white;
+  padding: 1.1rem 0;
+  cursor: pointer;
+  transition: 0.1s;
+  margin: 0.5rem auto;
+  border-radius: 0.5rem;
+}
+.searchDrawer_contactCard:hover {
+  background: linear-gradient(to right, #ff6b95, #ff0048);
+  color: white;
+}
+.contactCard_img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 1.5rem;
+}
+.contactCard_info {
+  width: 65%;
+  align-self: center;
+}
+.contactCard_name {
+  width: 100%;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  padding: 0.25rem 0;
+}
+.contactCard_phoneno {
+  color: rgb(109, 109, 109);
+  margin-top: 0.1em;
+  font-size: 1.1rem;
+  padding: 0.25rem 0;
+}
+.searchDrawer_contactCard:hover .contactCard_phoneno {
+  color: white;
+}
+.searchDrawer_searchchats::-webkit-scrollbar {
+  width: 4px;
+}
+.searchDrawer_searchchats::-webkit-scrollbar-track {
+  border-radius: 0.5rem;
+}
+.searchDrawer_searchchats::-webkit-scrollbar-thumb {
+  background: #ff0048;
+  display: none;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+}
+.searchDrawer_searchchats::-webkit-scrollbar-thumb:hover {
+  background: #b80034;
+}
+.searchDrawer_searchchats:hover::-webkit-scrollbar-thumb {
+  display: block;
+}
+
+@media screen and (max-width: 1268px) {
+  .searchDrawer {
+    width: 90%;
+  }
+  .searchDrawer_btn {
+    padding: 0.7rem 0.7rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .searchDrawer {
+    height: 100%;
+    margin-top: 0;
+  }
+  .searchDrawer_container {
+    height: 92%;
+  }
+  .searchDrawer_contactCard {
+    padding: 0.75rem 0;
+    margin: 0.5rem auto;
+  }
+  .contactCard_img {
+    width: 40px;
+    height: 40px;
+    margin: 0 0.75rem;
+  }
+  .contactCard_info {
+    width: 80%;
+  }
+  .contactCard_name {
+    font-size: 1.2rem;
+  }
+  .contactCard_phoneno {
+    margin-top: 0.1rem;
+    font-size: 1rem;
+  }
+  .searchDrawer_searchchats {
+    height: 95%;
+  }
+}

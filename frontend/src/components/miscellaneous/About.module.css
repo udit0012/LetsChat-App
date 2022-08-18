@@ -1,0 +1,88 @@
+.about {
+  font-family: "PT Sans Narrow", sans-serif;
+  padding-bottom: 5rem;
+}
+.about_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem 14rem;
+}
+.about_head {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  color: #ff0048;
+  font-weight: 600;
+}
+.about_cards {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  flex-wrap: wrap;
+}
+.about_card {
+  padding: 2rem 0.5rem;
+  display: flex;
+}
+.card_icon {
+  color: #ff0048;
+  font-size: 1.9rem;
+}
+.card_desc{
+    padding: 0 .8rem;
+}
+.card_title{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+.card_description{
+  font-size: 1.3rem;
+}
+@media screen and (max-width: 1600px) {
+  .about_container { 
+        margin: 1rem 5rem;
+  }
+}
+@media screen and (max-width: 1268px) {
+  .about_container {
+    width: auto;
+    margin: 1rem 4rem;
+    padding: 0 1rem;
+  }
+  .about_head {
+    font-size: 2.5rem;
+    text-align: start;
+  }
+  .about_card {
+    margin: 0.75rem 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about_head {
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+  .about_cards {
+    grid-template-columns: 100%;
+    margin: 0.5rem 0;
+  }
+  .about_container {
+    margin: 1rem 1rem;
+  }
+  .about_card {
+    margin: 0.5rem 0rem;
+    padding: 0.5rem 0rem;
+  }
+  .card_title{
+      font-size: 1.4rem;
+      margin-bottom: 0;
+  }
+  .card_description{
+    display: none;
+  }
+}

@@ -1,0 +1,108 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  color: #ff0048;
+  padding: 0 10rem;
+}
+.nav_time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.logoname {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: "PT Sans Narrow", sans-serif;
+  padding: 1rem 3rem;
+  color: #ff0048;
+}
+.nav_btns{
+    color: #ff0048;
+    padding: 1.5rem 3rem;
+}
+.nav_btn,.nav_btnOutline{
+    border: 2px solid #ff0048;
+    text-decoration: none;
+    margin: 0 .5rem;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    transition: .2s;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.nav_btn{
+  color: white;
+  background: #ff0048 ;
+}
+.nav_btnOutline{
+    color: #ff0048;
+}
+.nav_usericon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #616161;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+.nav_username{
+  padding: 0 .5rem;
+}
+.nav_usericon i{
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 0;
+  border-radius: 50%;
+  background: #ff0048;
+  color: white;
+}
+.nav_btnOutline:hover{
+    color: white;
+    background-color: #ff0048;
+}
+.nav_btn:hover{
+    border: 2px solid #b00032;
+    background: #b00032 ;
+}
+
+@media screen and (max-width: 1600px) {
+  .Navbar{
+    padding: 0 4rem;
+  }
+}
+@media screen and (max-width: 1268px) {
+  .Navbar{
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .logoname{
+    font-size: 2rem;
+    padding: .5rem 1.25rem;
+  }
+  .nav_btns{
+    padding: .75rem .75rem;
+  }
+  .nav_btn,.nav_btnOutline{
+    font-size: 1rem;
+    padding: .3rem .8rem;
+    margin: 0 .25rem;
+  }
+  .nav_btn{
+    display: none;
+  }
+  .nav_usericon{
+    font-size: 1rem;
+  }
+  .nav_usericon i{
+    width: 2rem;
+    height: 2rem;
+  }
+}

@@ -1,0 +1,67 @@
+.dialog{
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    top: 0rem;
+    right: 0;
+    border-left: 1px solid rgb(179, 179, 179);
+    box-shadow: 0 0 10px rgb(139, 139, 139);
+  }
+  .dialogbox{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+  .dialog_header{
+      display: flex;
+      align-items: center;
+      background: #fff3f7;
+      padding: 1.8rem 0;
+      border-bottom: 1px solid rgb(190, 190, 190);
+  }
+  .dialog_headername{
+      color: black;
+      font-size: 1.4rem;
+  }
+  .usericon{
+    text-decoration: none; 
+    margin: 0 .2em;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .userdetails{
+      width: 100%;
+      display: flex;
+      align-items: center;
+    color: black;
+    padding: .5em 0;
+    flex-direction: column;
+  }
+  .userimg{
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      margin: 1rem 0;
+  }
+  .detail{
+    font-size: 1.2rem;
+    font-family: "PT Sans Narrow", sans-serif;
+    margin: .3em 0;
+  }
+  .username{
+      margin: .3rem 0;
+    font-size: 1.7rem;
+  }
+  @media screen and (max-width:1268px) {
+   .dialog{
+       width: 100%;
+   }
+  }
+  
+  @media screen and (max-width:768px) {
+    .dialog{
+        width: 100%;
+    }
+  }

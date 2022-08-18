@@ -1,0 +1,465 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
+
+:root{
+  --appcolor: black;
+}
+.App{
+  width: 100vw;
+  height: 100vh;
+}
+.homepage{
+  display: flex;
+  height: 100vh;
+}
+.mainbody{
+  overflow: auto;
+}
+.w100{
+  width: 100%;
+}
+.h100{
+  height: 100%;
+}
+.Navbar{
+  display: flex;
+  height: 8vh;
+}
+.disflex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoname {
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+.alert-danger {
+  background-color: #ffd1d6;
+  border: 3px solid red;
+  color: red;
+}
+.alert-warning {
+  background-color: #fff0c2;
+  border: 3px solid #ffc000;
+  color: #ffc000;
+}
+.alert-success {
+  background-color: #aaffd9;
+  border: 3px solid rgb(0, 153, 89);
+  color: rgb(0, 153, 89);
+}
+.usericon{
+  text-decoration: none; 
+  margin: 0 .2em;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.profileimg{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 .5em;
+}
+.chatlistimg{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 .5em;
+}
+.lbtn {
+  color: white;
+  background-color: var(--appcolor);
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.4em 1em;
+  margin: 0.2em 0;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  transition: 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+.lbtn:hover {
+  opacity: 0.8;
+}
+.lbtnOutline {
+  color: var(--appcolor);
+  border: 1px solid var(--appcolor);
+  background-color: transparent;
+  opacity: 1;
+}
+.lbtnOutline:hover {
+  color: white;
+  opacity: 1;
+  background-color: var(--appcolor);
+}
+.RegLegContainer {
+  width: 70%;
+  margin: 3em auto;
+  height: 70vh;
+  display: flex;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px black;
+  position: relative;
+}
+.RegLegBox {
+  width: 60%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+  border-radius: 1em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  transform: skewX(-20deg);
+  transform-origin: -50% 0;
+}
+.RegLegForm {
+  width: 50%;
+  height: 60%;
+  margin: 0 auto;
+}
+.loginContainer .RegLegForm{
+  height: 45%;
+}
+.formsubhead {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 0.5em;
+}
+.RegLegImage {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.registerInput {
+  width: 100%;
+  margin: .5em 0;
+  border-radius: 0.2em;
+  border: 1px solid var(--appcolor);
+  display: flex;
+  align-items: center;
+}
+.RegInput{
+  padding: .5em 0.5em;
+  font-size: 1.2rem;
+  border: none;
+  width: 90%;
+  border-radius: .2em;
+  outline: none;
+  background-color: transparent;
+}
+.RegInput::placeholder {
+  color: #191919
+}
+.submitbtn{
+  margin-top: 1em;
+}
+.dialog{
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  top: 0rem;
+}
+.dialogbox{
+  width: 100%;
+  height: 100%;
+  background-color: #ff0048;
+}
+.userdetails{
+  color: black;
+  padding: .5em 0;
+  margin-bottom: 1em;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.userdetails .detail{
+  font-size: 1.5rem;
+  font-family: "PT Sans Narrow", sans-serif;
+  margin: .3em 0;
+}
+.userdetails .name{
+  font-size: 3rem;
+  font-weight: bold;
+}
+.inputbox{
+  background-color: white;
+  border-radius: .5em;
+  overflow: hidden;
+  width: 80%;
+  height: 60%;
+  padding: .1em .6em;
+}
+.topbar{
+  justify-content: flex-start;
+  height: 8vh;
+}
+.topbarHead{
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: bold;
+  color: white;
+  pointer-events: none;
+}
+.menubox{
+  position: absolute;
+  left: -90px;
+  background-color: white;
+  z-index: 12;
+  border-radius: .2em;
+  padding: .5em 0;
+  width: 150px;
+  box-shadow: 5px 5px 20px var(--appcolor);
+}
+.menuItems{
+  list-style: none;
+  color: var(--appcolor);
+  font-size: 1.3rem;
+  margin: .2em 0;
+  padding: .4em .5em;
+}
+.menuItems:hover{
+  background-color: var(--appcolor);
+  color: white;
+}
+.menuItems:focus{
+  background-color: var(--appcolor);
+  color: white;
+}
+.contactCard:hover{
+  background-color: var(--appcolor);
+  color: white;
+}
+.contactinfo{
+  width: 65%;
+  display: flex;
+  flex-direction:column ;
+  margin: 0 .5em;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+.contactname{
+  width: 100%;
+  /* color: #111111; */
+  font-weight: bold;
+}
+.messagetext{
+  color: rgb(58, 58, 58);
+  margin-top: .1em;
+}
+.contactCard:hover .messagetext{
+  color: white;
+}
+.contactCard:hover .messagetime{
+  color: white;
+}
+.contactCard .icon{
+  color: var(--appcolor);
+  margin: 0 .4em;
+  cursor: pointer;
+}
+.contactCard:hover .icon{
+  color: white;
+}
+.chatcontainer{
+  position: relative;
+  flex-direction: column;
+}
+.profileheader{
+  justify-content: flex-start;
+  padding: .6em 0;;
+}
+.msgbox{
+  width: 97%;
+  height: 97%;
+  padding-top: .4em;
+  background-color: #ffffff;
+  border-radius: 1em;
+  overflow-y: auto;
+}
+.msg{
+  width: 100%;
+  display: flex;
+}
+.msgsent{
+  justify-content: flex-end;
+}
+.msgreceive{
+  justify-content: flex-start;
+}
+.msgText{
+  margin: .1em .5em;
+  padding: .3em .8em;
+  font-size: 1.3rem;
+  border-radius: .9em;
+}
+.sendername{
+  color: var(--appcolor);
+  font-size: .8rem;
+  font-weight: bold;
+  margin-top: .3em;
+  margin-bottom: .5em;
+  text-transform: capitalize;
+}
+.msgsent .msgText{
+  background-color: #e2e2e2;
+  color: var(--appcolor);
+}
+.msgreceive .msgText{
+  border: 1px solid #d2d2d2;
+  background-color: white;
+}
+.chatbtn{
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  margin: 0 .4em;
+  cursor: pointer;
+}
+
+.icon-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: .6em .7em;
+  margin: 0 1em;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .2s;
+}
+.icon-btn img{
+  width: 30px;
+}
+.icon-btn:hover{
+  background-color: #d6d6d6;
+}
+@media screen and (max-width: 1224px) {
+  .logoname{
+    font-size: 2.4rem;
+  }
+  .formsubhead{
+    font-size: 1.7rem;
+  }
+  .dialogbox{
+    width: 90%;
+    height: auto;
+  }
+  .RegLegContainer {
+    width: 95%;
+    height: 60vh;
+  }
+  .RegLegBox {
+    width: 75%;
+    transform: skewX(-20deg);
+  }
+  .RegLegForm{
+    padding-left: 3em;
+  }
+  .RegLegImage{
+    width: 20%;
+  }
+  .icon-btn{
+    padding: .6em .7em;
+  }
+  .icon-btn img{
+    width: 25px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .dialogbox{
+    width: 100%;
+    height: 100%;
+    left: 00%;
+    top: 00%;
+    position: relative;
+    transform: translate(0%,0%);
+    border-radius: 0;
+  }
+  .userdetails .detail{
+    font-size: 1.2rem;
+  }
+  .userdetails .name{
+    font-size: 1.7rem;
+  }
+  .lbtn{
+  border-radius: 0.2em;
+  padding: 0.3em .6em;
+  margin: 0.2em 0;
+  font-size: 1.1rem;
+  }
+  .RegLegContainer {
+    width: 100%;
+    height: 100%;
+    margin-top: 5em;
+    padding: 2em 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .RegLegBox {
+    width: 100%;
+    display: flex;
+    background-color: transparent;
+    backdrop-filter: none;
+    justify-content: center;
+    align-items: center;
+    transform: skewX(0deg);
+  }
+  .RegLegForm {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .RegLegForm input {
+    width: 100%;
+  }
+  .RegInput{
+    font-size: 1rem;
+    padding: .7em .5em;
+  }
+  .submitbtn{
+    margin-top: 1em;
+  }
+  .logoname {
+    font-size: 1.7rem;
+    justify-content: flex-start;
+  }
+  .reglogbtn {
+    justify-content: flex-end;
+  }
+  .formsubhead {
+    font-size: 1.5rem;
+  }
+  .chatcontainer{
+    /* height: calc(100%-8vh); */
+  }
+  .icon-btn img{
+    width: 20px;
+  }
+  .profileheader{
+    padding: .6em 0;;
+  }
+  .profileimg{
+    width: 35px;
+    height: 35px;
+  }
+  .chatlistimg{
+    width: 45px;
+    height: 45px;
+  }
+  .msgText{
+    margin: .1em .3em;
+    padding: .3em .8em;
+    font-size: 1rem;
+    border-radius: .9em;
+  }
+}
