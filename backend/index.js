@@ -19,8 +19,8 @@ const server = app.listen(port, () => {
     console.log(`Backend is listening at http://localhost:${port}`)
 })
 if(process.env.NODE_ENV==="production"){
-    app.use(express.static("../frontend/build"));
-    
+    app.use(express.static("./frontend/build"));
+
 }
 const io = require("socket.io")(server, {
     pingTimeout: 60000,
