@@ -1,6 +1,6 @@
 .scrollable_feed {
   max-height: 99%;
-  padding: .5rem;
+  padding: .5rem 1rem;
 }
 .scrollable_feed::-webkit-scrollbar {
   width: 4px;
