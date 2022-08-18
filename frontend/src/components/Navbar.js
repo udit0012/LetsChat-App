@@ -5,7 +5,6 @@ import { useMediaQuery } from "react-responsive";
 import NoteContext from '../context/Notecontext';
 import UserProfile from './Dialogboxes/UserProfile';
 import { getSender } from './config/ChatLogic';
-import NotificationBadge, { Effect } from "react-notification-badge"
 
 const Navbar = () => {
     const navigate = useNavigate()
