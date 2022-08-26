@@ -1,7 +1,7 @@
 import React from 'react';
-import './TypingLoader.css'
+import styles from './TypingLoader.module.css'
 const TypingLoader = () => {
-  return <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>;
+  return <div className={styles.typing_dots}><div></div><div></div><div></div></div>;
 };
 
 export default TypingLoader;

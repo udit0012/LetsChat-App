@@ -17,5 +17,3 @@ const ScrollableChat = ({ messages, typing,room }) => {
 };
 
 export default ScrollableChat;
-{/* <div className='msg msgreceive'><span className='msgText'>Hello</span></div>
-                    <div className='msg msgsent'><span className='msgText'>Hi</span></div> */}

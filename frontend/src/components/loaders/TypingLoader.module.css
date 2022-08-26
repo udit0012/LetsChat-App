@@ -1,0 +1,29 @@
+.typing_dots {
+  display: flex;
+  padding: 0.5rem .1rem;
+}
+.typing_dots div{
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  margin: 0 .25rem;
+  border-radius: 50%;
+  animation: updown 1s infinite;
+}
+.typing_dots div:nth-child(2){
+  animation-delay: .15s;
+}
+.typing_dots div:nth-child(3){
+  animation-delay: .3s;
+}
+@keyframes updown {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-5px);
+  }
+  70%{
+    transform: translateY(0);
+  }
+}
