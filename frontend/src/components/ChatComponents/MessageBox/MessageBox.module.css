@@ -103,7 +103,6 @@
 .chatbox_msg_cont {
   height: 100%;
   width: 100%;
-  overflow-y: auto;
   position: absolute;
 }
 .chatbox_horizontal_line {
