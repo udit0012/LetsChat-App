@@ -33,7 +33,7 @@ const ChatList = ({groupmodal, opengroupmodal}) => {
         }
       })
       const json = await response.json();
-      setChats(json)
+      setChats(json.reverse())
       setLoading(false)
     } catch (error) {
       showAlert(error.message, "danger")

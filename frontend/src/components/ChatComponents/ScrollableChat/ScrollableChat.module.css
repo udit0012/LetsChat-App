@@ -16,18 +16,18 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  margin: 0.75rem 0;
+  margin: 0.5rem 0;
 }
 .msg_recieve {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  margin: 0.75rem 0;
+  margin: 0.5rem 0;
 }
 .msgsent_text {
   max-width: 70%;
   word-break: break-word;
-  margin: 0.1rem 2rem;
+  margin: 0.1rem .25rem;
   padding: 0.75rem 1rem;
   font-size: 1.2rem;
   border-radius: 0.5rem;
@@ -40,7 +40,7 @@
 .msgrecieve_text {
   max-width: 70%;
   word-break: break-word;
-  margin: 0.1rem 2rem;
+  margin: 0.1rem .25rem;
   padding: 0.75rem 1rem;
   font-size: 1.2rem;
   border-radius: 0.5rem;
@@ -62,7 +62,7 @@
 @media screen and (max-width:768px) {
   .msgsent_text,.msgrecieve_text{
     font-size: 1rem;
-    margin: .1rem .5rem;
+    margin: .1rem .25rem;
     padding: .5rem .75rem;
     box-shadow: 0 0 4px rgba(133, 133, 133, 0.541);
   }

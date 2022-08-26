@@ -169,11 +169,11 @@ const MessageBox = () => {
                         showAlert("Message cannot be empty", "warning")
                     }
                 }}>
-                    <div className={styles.chatbox_msgicons}><i className="fa-solid fa-plus" aria-hidden="true"></i></div>
+                    <button className={styles.chatbox_msgicons}><i className="material-icons">add</i></button>
                     <div className={styles.chatbox_msg_input}>
                         <input type="text" className={styles.chatbox_input} value={newmessage} onChange={typinghandler} placeholder='Type a message here' />
                     </div>
-                    <button type='submit' className={styles.chatbox_msgicons}><i className="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+                    <button type='submit' className={styles.chatbox_msgicons}><i className="material-icons">send</i></button>
                     {/* <button className='chatbtn disflex' type='submit' style={{}}><span className="material-icons" style={{ color: "white", fontSize: "2rem" }}>send</span></button> */}
                 </form>
             </div>
