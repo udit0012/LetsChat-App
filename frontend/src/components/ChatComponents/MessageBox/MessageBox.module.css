@@ -224,8 +224,7 @@
     height: 89%;
   }
   .chatbox_msgicons {
-    width: 2.5rem;
-    height: 2rem;
+    padding: .5rem;
   } 
   .chatbox_horizontal_line{
     width: 95%;

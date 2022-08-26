@@ -29,7 +29,7 @@
   word-break: break-word;
   margin: 0.1rem .25rem;
   padding: 0.75rem 1rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border-radius: 0.5rem;
   border-bottom-right-radius: 0;
   border: 1px solid rgb(189, 189, 189);
@@ -42,7 +42,7 @@
   word-break: break-word;
   margin: 0.1rem .25rem;
   padding: 0.75rem 1rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border-radius: 0.5rem;
   border-top-left-radius: 0;
   background: linear-gradient(to right, #ff5988, #ff0048);
@@ -61,9 +61,9 @@
 
 @media screen and (max-width:768px) {
   .msgsent_text,.msgrecieve_text{
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: .1rem .25rem;
-    padding: .5rem .75rem;
+    padding: .6rem 1rem;
     box-shadow: 0 0 4px rgba(133, 133, 133, 0.541);
   }
   .msg_sent, .msg_recieve {
