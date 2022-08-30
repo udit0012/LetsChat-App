@@ -71,7 +71,7 @@ const ChatList = ({groupmodal, opengroupmodal}) => {
             <div type="text" className={styles.chatlist_searchInput} >Search or start new chat</div>
           </div>
           <div className={styles.chatlist_latestchats} >
-            {chats ? (<div className={styles.chatlist_latestchat_list} >
+            {!chats ? (<div className={styles.chatlist_latestchat_list} >
               {chats?.map((chat) => {
                 return <div key={chat._id} onClick={() => { setSelectedchat(chat); }} className={styles.chatlist_contactCard} style={selectedchat === chat ? { background: "linear-gradient(to right, #ff6b95, #ff0048)", color: "white" } : {}}>
                   <img className={styles.contactCard_img} src={!chat.isGroupchat ? getSender(user, chat.users).pic : "https://www.pngitem.com/pimgs/m/78-786314_computer-user-icon-peolpe-avatar-group-people-avatar.png"} alt="" />
@@ -84,9 +84,9 @@ const ChatList = ({groupmodal, opengroupmodal}) => {
                   </div>
                 </div>
               })}
-            </div>) : (<div className='w100 disflex' style={{ height: "93%" }}>
-              <div><span className='material-icons'>search</span>Search your friend</div>
-              <div>Start a conversation on LetsChat</div>
+            </div>) : (<div className={styles.displayMessage}>
+              <div className={styles.displayMessage1}><span className='material-icons'>search</span>Search your friend's Name</div>
+              <div className={styles.displayMesageHead}>Start a conversation on LetsChat</div>
             </div>)}
           </div>
         </div>
