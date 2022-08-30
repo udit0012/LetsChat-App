@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express();
 const cors = require("cors")
-const mongoConnect = require("./db");
+const mongoConnect = require("./backend/db");
 const path = require("path");
 require("dotenv").config();
 
@@ -10,24 +10,25 @@ mongoConnect();
 app.use(express.json())
 app.use(cors());
 
-app.use('/LetsChatApi/messages', require('./routes/messages'))
-app.use('/LetsChatApi/auth', require('./routes/auth'))
-app.use('/LetsChatApi/allusers', require('./routes/allusers'))
-app.use('/LetsChatApi/chat', require('./routes/chat'))
+app.use('/LetsChatApi/messages', require('./backend/routes/messages'))
+app.use('/LetsChatApi/auth', require('./backend/routes/auth'))
+app.use('/LetsChatApi/allusers', require('./backend/routes/allusers'))
+app.use('/LetsChatApi/chat', require('./backend/routes/chat'))
 
 const server = app.listen(port, () => {
     console.log(`Backend is listening at http://localhost:${port}`)
 })
 if(process.env.NODE_ENV==="production"){
-    app.use(express.static("./frontend/build"));
+    app.use(express.static("frontend/build"));
     app.get("*",(req,res)=>{
-        res.sendFile(path.resolve(_dirname,"frontend","build","index.html"));
+        res.sendFile(path.resolve(__dirname,"frontend","build","index.html"));
     })
 }
 const io = require("socket.io")(server, {
     pingTimeout: 60000,
     cors: {
-        origin: "https://letschat-with-friends.herokuapp.com",
+        // origin: "https://letschat-with-friends.herokuapp.com",
+        origin:"http://localhost:3000"
     },
 });
 

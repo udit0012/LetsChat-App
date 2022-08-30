@@ -202,6 +202,14 @@
   .chatlist_btn{
     padding: .7rem .7rem;
   }
+  .displayMessage{
+    font-size: 1.2rem;
+    height: 70%;
+  }
+  .displayMesageHead{
+    font-size: 1.4rem;
+    margin: .5rem 0;
+  }
 }
 @media screen and (max-width: 768px) {
   .chatContainer{

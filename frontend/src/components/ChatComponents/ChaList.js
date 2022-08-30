@@ -50,6 +50,7 @@ const ChatList = ({groupmodal, opengroupmodal}) => {
   useEffect(() => {
     setLoggedUser(JSON.parse(localStorage.getItem("user")))
     fetchchats();
+    console.log(chats?"all chats":"no chats");
   }, [fetchagain]);
 
   return <div className={styles.chatList} style={{ display: isMobile ? selectedchat ? "none" : "flex" : "flex" }}>
@@ -71,7 +72,7 @@ const ChatList = ({groupmodal, opengroupmodal}) => {
             <div type="text" className={styles.chatlist_searchInput} >Search or start new chat</div>
           </div>
           <div className={styles.chatlist_latestchats} >
-            {chats ? (<div className={styles.chatlist_latestchat_list} >
+            {chats.length ? (<div className={styles.chatlist_latestchat_list} >
               {chats?.map((chat) => {
                 return <div key={chat._id} onClick={() => { setSelectedchat(chat); }} className={styles.chatlist_contactCard} style={selectedchat === chat ? { background: "linear-gradient(to right, #ff6b95, #ff0048)", color: "white" } : {}}>
                   <img className={styles.contactCard_img} src={!chat.isGroupchat ? getSender(user, chat.users).pic : "https://www.pngitem.com/pimgs/m/78-786314_computer-user-icon-peolpe-avatar-group-people-avatar.png"} alt="" />

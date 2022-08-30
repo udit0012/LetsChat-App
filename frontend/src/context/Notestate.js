@@ -11,8 +11,8 @@ const Notestate = (props) => {
     const [notification, setNotification] = useState([]);
     const [fetchagain, setFetchagain] = useState(false);
     const [searchSideBar, setSearchSideBar] = useState(false)
-    // const link = 'http://localhost:8000'
-    const link = 'https://letschat-with-friends.herokuapp.com'
+    const link = 'http://localhost:8000'
+    // const link = 'https://letschat-with-friends.herokuapp.com'
 
     const fetchuserdata = async () => {
         try {
