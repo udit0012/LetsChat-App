@@ -7,14 +7,13 @@ LetsChat is a Real time chatting app which is created using **React.js** for use
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| appcolor | ![](https://via.placeholder.com/10/000000?text=+) #000000 |
 | success | ![](https://via.placeholder.com/10/009959?text=+) #009959 |
 | warning | ![](https://via.placeholder.com/10/ffc000?text=+) #ffc000 |
 | danger | ![](https://via.placeholder.com/10/ff0000?text=+) #ff0000 |
 
 ## Demo
 
-    #Link of the app(to be updated)
+   Live : https://letschat-with-friends.herokuapp.com/
 
 ![Application Demo](https://github.com/udit0012/LetsChat-App/blob/main/Screenshots/ChatPage.png)
 ## Tech Stack
