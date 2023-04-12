@@ -1,3 +1,10 @@
+:root{
+  --colorLight2:#ace6e9;
+  --colorLight1:#5fb9bd;
+  --colorLight:#0fbdc5;
+  --color1:#127d82;
+  --color2:#063638;
+}
 .dialog {
   width: 40%;
   height: 100%;
@@ -15,12 +22,12 @@
 .dialog_header {
   display: flex;
   align-items: center;
-  background: #fff3f7;
+  background: var(--color1);
   padding: 1.8rem 0;
   border-bottom: 1px solid rgb(190, 190, 190);
 }
 .dialog_headername {
-  color: black;
+  color: white;
   font-size: 1.4rem;
 }
 .groupdetails{
@@ -46,7 +53,7 @@
   justify-content: space-between;
   padding: .5rem;
   margin: .5rem 1rem;
-  border-bottom: 1px solid #ff0048;
+  border-bottom: 1px solid var(--color1);
 }
 .update_input{
   border: none;
@@ -91,11 +98,14 @@
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: #ff0048;
+  background-color: var(--color1);
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
   margin-right: .5rem;
+}
+.btn_addMember span:hover{
+  background-color: var(--color2);
 }
 .contactcard{
   display: flex;
@@ -105,12 +115,12 @@
   cursor: pointer;
   transition: .1s;
 }
-.contactcard:hover{
-  border-radius: .2rem;
-  border-top-left-radius: 1.5rem;
-  border-bottom-left-radius: 1.5rem;
-  background-color: #e2e2e2;
-}
+/* .contactcard:hover{
+  border-radius: .5rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  background-color: var(--colorLight1);
+} */
 .profileimg{
   width: 3.5rem;
   height: 3.5rem;
@@ -126,17 +136,22 @@
   align-items: center;
   position: absolute;
   right: 1rem;
-  color: #ff0048;
+  color: var(--color1);
   padding: .3rem;
   border-radius: .3rem;
   font-size: .9rem;
-  background-color: #ffc4d5;
+  background-color: var(--colorLight2);
+}
+.userbtn:hover{
+  color: var(--color2);
+  background-color: var(--colorLight1);
 }
 .close_icon{
   background-color: transparent;
   outline: none;
   border: none;
   cursor: pointer;
+  color: white;
   margin: 0 1rem;
 }
 @media screen and (max-width: 1268px) {

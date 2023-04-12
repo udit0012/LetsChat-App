@@ -1,3 +1,10 @@
+:root{
+    --colorLight2:#ace6e9;
+    --colorLight1:#5fb9bd;
+    --colorLight:#0fbdc5;
+    --color1:#127d82;
+    --color2:#063638;
+  }
 .home_container{
     width: 100%;
 }
@@ -15,7 +22,7 @@
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 3rem;
     font-weight: bold;
-    color: #ff0048;
+    color: var(--color1);
     padding: 1rem 0;
 }
 .home_text{
@@ -27,19 +34,19 @@
     font-weight: bold;
 }
 .home_btn{
-    border: 2px solid #ff0048;
+    border: 2px solid var(--color1);
     text-decoration: none;
     padding: .5rem 1rem;
     color: white;
-    background: #ff0048 ;
+    background: var(--color1) ;
     border-radius: .3rem;
     transition: .2s;
     font-size: 1.2rem;
     font-weight: 500;
 }
 .home_btn:hover{
-    border: 2px solid #b00032;
-    background: #b00032 ;
+    border: 2px solid var(--color2);
+    background: var(--color2) ;
 }
 
 .home_img{

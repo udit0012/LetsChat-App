@@ -1,5 +1,12 @@
+:root{
+  --colorLight2:#ace6e9;
+  --colorLight1:#5fb9bd;
+  --colorLight:#0fbdc5;
+  --color1:#127d82;
+  --color2:#063638;
+}
 .footer {
-  background-color: #8d0028;
+  background-color: var(--color2);
   color: white;
   padding: 2rem;
   display: flex;
@@ -72,7 +79,7 @@
   column-gap: 10rem;
 }
 .footer_name{
-  color: rgb(0, 255, 191);
+  color: var(--colorLight1);
 }
 .horizontal_line{
   height: .1rem;

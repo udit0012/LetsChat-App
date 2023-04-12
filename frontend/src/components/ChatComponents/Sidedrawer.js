@@ -5,7 +5,6 @@ import NoteContext from '../../context/Notecontext';
 import Spinner from '../loaders/Spinner';
 const SideDrawer = (props) => {
     const { link, showAlert, chats, setChats, setSelectedchat } = useContext(NoteContext)
-    const isMobile = useMediaQuery({ query: '(max-width: 700px)' })
     const [search, setSearch] = useState("");
     const [searchresult, setSearchresult] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -29,7 +28,7 @@ const SideDrawer = (props) => {
             console.log(response);
             const data = await response.json();
             setSearchresult(data)
-            console.log(data);
+            console.log("data",data);
             setLoading(false)
         } catch (error) {
             showAlert(error.message, "danger")
@@ -73,7 +72,7 @@ const SideDrawer = (props) => {
                     {loading ? (
                         <Spinner simple={false} big={false} />
                     ) :
-                        (<div className={styles.searchDrawer_searchchats_list}>{searchresult?.map((user) => {
+                        (<div className={styles.searchDrawer_searchchats_list}>{searchresult.length?searchresult.map((user) => {
                             return <div key={user._id} className={styles.searchDrawer_contactCard} onClick={() => accessChat(user._id)}>
                                 <img className={styles.contactCard_img} src={user.pic} alt="" />
                                 <div className={styles.contactCard_info}>
@@ -81,7 +80,7 @@ const SideDrawer = (props) => {
                                     <div className={styles.contactCard_phoneno} >{user.phoneno}</div>
                                 </div>
                             </div>
-                        })}
+                        }):<div>No User found</div>}
                         </div>
 
                         )}

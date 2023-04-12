@@ -1,3 +1,11 @@
+:root{
+  --appcolor: black;
+  --colorLight2:#ace6e9;
+  --colorLight1:#5fb9bd;
+  --colorLight:#0fbdc5;
+  --color1:#127d82;
+  --color2:#063638;
+}
 .chatbox_container {
   width: 95%;
   display: flex;
@@ -8,11 +16,12 @@
   box-shadow: -1px -1px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
+  border-radius: 20px;
 }
 .chatbox_header {
   display: flex;
   justify-content: space-between;
-  background: #fff3f7;
+  background: var(--color1);
   width: 100%;
   padding: 1rem 0;
   color: black;
@@ -51,13 +60,13 @@
   cursor: pointer;
 }
 .chatbox_header_name {
-  color: black;
+  color: white;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0.25rem 0;
 }
 .chatbox_lastseen {
-  color: #ff0048;
+  color: white;
   font-size: 0.9rem;
   font-weight: 500;
   padding: 0.25rem 0;
@@ -71,17 +80,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: var(--color1);
   border-radius: 50%;
-  color: rgb(139, 122, 122);
+  color: var(--colorLight1);
   font-size: 1.4rem;
   cursor: pointer;
   margin: 0 0.5rem;
   transition: .1s;
-  box-shadow: 1px 1px 10px rgba(144, 144, 144, 0.705);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.281);
 }
 .chatbox_icons:hover{
-  background: rgb(209, 209, 209);
+  background: var(--color1);
+  opacity: .8;
 }
 .chatbox_msgbox {
   width: 100%;
@@ -133,7 +143,7 @@
 }
 .chatbox_msgicons {
   border-radius: 50%;
-  background: linear-gradient(to right, #ff6b95, #ff0048);
+  background: var(--color1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,7 +155,7 @@
   outline: none;
 }
 .chatbox_msgicons:hover {
-  background: linear-gradient(to right, #ff6b95, #c32250);
+  background: var(--color2);
 }
 .chatbox_msgdisplay {
   width: 100%;
@@ -157,7 +167,7 @@
   align-items: center;
 }
 .chatbox_logo {
-  color: #ff0048;
+  color: var(--color1);
   font-size: 3rem;
   font-weight: bold;
   text-decoration: none;
@@ -165,7 +175,7 @@
 }
 .chatbox_logomsg {
   font-weight: 500;
-  color: #b41b46;
+  color: var(--color2);
 }
 
 @media screen and (max-width:1268px) {

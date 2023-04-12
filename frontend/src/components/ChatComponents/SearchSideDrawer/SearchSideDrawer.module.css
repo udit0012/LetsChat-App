@@ -1,8 +1,15 @@
+:root{
+  --colorLight2:#ace6e9;
+  --colorLight1:#5fb9bd;
+  --colorLight:#0fbdc5;
+  --color1:#127d82;
+  --color2:#063638;
+}
 .searchDrawer {
   width: 80%;
   height: 100%;
   position: absolute;
-  background: #ffe5ea;
+  background: rgb(241, 241, 241);
 }
 .searchDrawer_container {
   width: 100%;
@@ -23,7 +30,7 @@
 }
 .searchDrawer_search span {
   cursor: pointer;
-  color: rgb(122, 122, 122);
+  color: var(--color2);
 }
 .searchDrawer_searchInput {
   margin: 0 0.5rem;
@@ -39,7 +46,7 @@
   outline: none;
   border-left: 1px solid rgb(122, 122, 122);
   background: transparent;
-  color: rgb(122, 122, 122);
+  color: var(--color2);
   display: flex;
   align-items: center;
   padding: 0 0.75rem;
@@ -62,7 +69,8 @@
 .searchDrawer_contactCard {
   width: 100%;
   display: flex;
-  background: white;
+  color: white;
+  background: var(--colorLight);
   padding: 1.1rem 0;
   cursor: pointer;
   transition: 0.1s;
@@ -70,7 +78,7 @@
   border-radius: 0.5rem;
 }
 .searchDrawer_contactCard:hover {
-  background: linear-gradient(to right, #ff6b95, #ff0048);
+  background: var(--color1);
   color: white;
 }
 .contactCard_img {
@@ -91,7 +99,7 @@
   padding: 0.25rem 0;
 }
 .contactCard_phoneno {
-  color: rgb(109, 109, 109);
+  color: white;
   margin-top: 0.1em;
   font-size: 1.1rem;
   padding: 0.25rem 0;
@@ -106,13 +114,13 @@
   border-radius: 0.5rem;
 }
 .searchDrawer_searchchats::-webkit-scrollbar-thumb {
-  background: #ff0048;
+  background: var(--color1);
   display: none;
   border-radius: 0.5rem;
   transition: 0.2s;
 }
 .searchDrawer_searchchats::-webkit-scrollbar-thumb:hover {
-  background: #b80034;
+  background: var(--color2);
 }
 .searchDrawer_searchchats:hover::-webkit-scrollbar-thumb {
   display: block;

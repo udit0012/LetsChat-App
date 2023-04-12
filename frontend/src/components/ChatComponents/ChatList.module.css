@@ -1,3 +1,10 @@
+:root{
+  --colorLight2:#ace6e9;
+  --colorLight1:#5fb9bd;
+  --colorLight:#0fbdc5;
+  --color1:#127d82;
+  --color2:#063638;
+}
 .chatContainer {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -7,7 +14,7 @@
   content: "";
   width: 100%;
   height: 100%;
-  background: #ffe5ea;
+  background: rgb(241, 241, 241);
   position: absolute;
   z-index: -1;
 }
@@ -33,7 +40,7 @@
 }
 .chatlist_head {
   font-family: "PT Sans Narrow", sans-serif;
-  color: black;
+  color:var(--color2);
   pointer-events: none;
 }
 .chatlist_head1 {
@@ -58,13 +65,13 @@
   transition: 0.2s;
   font-size: 1rem;
   color: white;
-  background: linear-gradient(to right, #ff6b95, #ff0048);
+  background: var(--color1);
 }
 .chatlist_btn span {
   margin-right: 0.25rem;
 }
 .chatlist_btn:hover {
-  background: #b80034;
+  background: var(--color2);
 }
 .chatlist_mobile_search{
   display: none;
@@ -112,7 +119,7 @@
   font-size: 1.4rem;
   flex-direction: column;
   height: 80%;
-  color: rgb(85, 85, 85);
+  color: var(--color2);
 }
 .displayMessage1{
   display: flex;
@@ -132,9 +139,14 @@
   transition: 0.2s;
   margin: 0.5rem auto;
   border-radius: 0.5rem;
+  box-shadow: 5px 5px 10px rgb(202, 202, 202);
+}
+.chatlist_activeContactCard {
+  background: var(--color1);
+  color: white;
 }
 .chatlist_contactCard:hover {
-  background: linear-gradient(to right, #ff6b95, #ff0048);
+  background: var(--color1);
   color: white;
 }
 .contactCard_img {
@@ -153,12 +165,19 @@
   text-transform: capitalize;
   font-size: 1.4rem;
   padding: .25rem 0;
+  color: var(--color1);
+}
+.chatlist_activeContactCard  .contactCard_name{
+  color: white;
 }
 .contactCard_msgtext{
-  color: rgb(109, 109, 109);
+  color: var(--color2);
   margin-top: .1em;
   font-size: 1.1rem;
   padding: .25rem 0;
+}
+.chatlist_contactCard:hover .contactCard_name{
+  color: white;
 }
 .chatlist_contactCard:hover .contactCard_msgtext{
   color: white;
@@ -170,13 +189,13 @@
   border-radius: 0.5rem;
 }
 .chatlist_latestchats::-webkit-scrollbar-thumb {
-  background: #ff0048;
+  background: var(--color1);
   display: none;
   border-radius: 0.5rem;
   transition: 0.2s;
 }
 .chatlist_latestchats::-webkit-scrollbar-thumb:hover {
-  background: #b80034;
+  background: var(--color2);
 }
 .chatlist_latestchats:hover::-webkit-scrollbar-thumb {
   display: block;

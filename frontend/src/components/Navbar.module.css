@@ -1,7 +1,14 @@
+:root{
+  --colorLight2:#ace6e9;
+  --colorLight1:#5fb9bd;
+  --colorLight:#0fbdc5;
+  --color1:#127d82;
+  --color2:#063638;
+}
 .Navbar {
   display: flex;
   justify-content: space-between;
-  color: #ff0048;
+  color: var(--color1);
   padding: 0 10rem;
 }
 .nav_time {
@@ -16,14 +23,14 @@
   text-decoration: none;
   font-family: "PT Sans Narrow", sans-serif;
   padding: 1rem 3rem;
-  color: #ff0048;
+  color: var(--color1);
 }
 .nav_btns{
-    color: #ff0048;
+    color: var(--color1);
     padding: 1.5rem 3rem;
 }
 .nav_btn,.nav_btnOutline{
-    border: 2px solid #ff0048;
+    border: 2px solid var(--color1);
     text-decoration: none;
     margin: 0 .5rem;
     padding: .5rem 1rem;
@@ -34,10 +41,10 @@
 }
 .nav_btn{
   color: white;
-  background: #ff0048 ;
+  background: var(--color1) ;
 }
 .nav_btnOutline{
-    color: #ff0048;
+    color: var(--color1);
 }
 .nav_usericon{
   display: flex;
@@ -60,16 +67,16 @@
   align-items: center;
   font-weight: 0;
   border-radius: 50%;
-  background: #ff0048;
+  background: var(--color1);
   color: white;
 }
 .nav_btnOutline:hover{
     color: white;
-    background-color: #ff0048;
+    background-color: var(--color1);
 }
 .nav_btn:hover{
-    border: 2px solid #b00032;
-    background: #b00032 ;
+    border: 2px solid var(--color2);
+    background: var(--color2) ;
 }
 
 @media screen and (max-width: 1600px) {

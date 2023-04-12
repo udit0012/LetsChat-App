@@ -16,7 +16,7 @@ const GroupModal = ({ opengroupmodal, groupmodal }) => {
 
     const HandleOnSubmit = async (e) => {
         e.preventDefault()
-        if (!selectedusers) {
+        if (selectedusers.length<2) {
             showAlert("Add atleast two members", "warning")
             return
         }

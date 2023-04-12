@@ -10,13 +10,13 @@ const Sidebar = ({opengroupmodal,groupmodal}) => {
     const isTablet = useMediaQuery({query:"(max-width:1268px)"})
     const isMobile = useMediaQuery({query:"(max-width:768px)"})
     const [display, setDisplay] = useState(false)
-    const {selectedchat,searchSideBar,logout} = useContext(NoteContext)
+    const {selectedchat,searchSideBar,logout,user} = useContext(NoteContext)
 
     const active1 = {
-        borderLeft : "4px solid #ff0048",
+        borderLeft : "4px solid #ace6e9",
     }
     const active2 = {
-        color:"#ff0048",
+        color:"#ace6e9",
     }
 
     const displaysideBar=()=>{
@@ -29,7 +29,8 @@ const Sidebar = ({opengroupmodal,groupmodal}) => {
                 <div>
                     <div className={styles.imgbox}>
                         <img className={styles.profileimg} src="https://icon-library.com/images/avatar-icon-images/avatar-icon-images-4.jpg" alt="" />
-                        <div className={styles.username}>name name</div>
+                        <div className={styles.username}>{user.username}</div>
+                        <div className={styles.phoneno}>{user.phoneno}</div>
                     </div>
                     <ul className={styles.sidebar_options}>
                         <li className={styles.sidebar_option} style={(location.pathname==="/"&!groupmodal)?active1:{}}>

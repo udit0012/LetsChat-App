@@ -11,8 +11,8 @@ const Notestate = (props) => {
     const [notification, setNotification] = useState([]);
     const [fetchagain, setFetchagain] = useState(false);
     const [searchSideBar, setSearchSideBar] = useState(false)
-    // const link = 'http://localhost:8000'
-    const link = 'https://letschat-with-friends.herokuapp.com'
+    const link = 'http://localhost:8000'
+    // const link = 'https://letschat-with-friends.herokuapp.com'
 
     const fetchuserdata = async () => {
         try {
@@ -64,9 +64,10 @@ const Notestate = (props) => {
             message: message,
             type: type
         })
+        console.log(message);
         setTimeout(() => {
             setAlert(null);
-        }, 2000);
+        }, 5000);
     }
     return <NoteContext.Provider value={{
         link,
@@ -78,6 +79,7 @@ const Notestate = (props) => {
         setChats,
         fetchuserdata,
         alert,
+        setAlert,
         opendialog,
         handledialog,
         logout,

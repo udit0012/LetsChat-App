@@ -74,7 +74,7 @@ const ChatList = ({groupmodal, opengroupmodal}) => {
           <div className={styles.chatlist_latestchats} >
             {chats.length ? (<div className={styles.chatlist_latestchat_list} >
               {chats?.map((chat) => {
-                return <div key={chat._id} onClick={() => { setSelectedchat(chat); }} className={styles.chatlist_contactCard} style={selectedchat === chat ? { background: "linear-gradient(to right, #ff6b95, #ff0048)", color: "white" } : {}}>
+                return <div key={chat._id} onClick={() => { setSelectedchat(chat); }} className={`${styles.chatlist_contactCard} ${selectedchat===chat?styles.chatlist_activeContactCard:""}`}>
                   <img className={styles.contactCard_img} src={!chat.isGroupchat ? getSender(user, chat.users).pic : "https://www.pngitem.com/pimgs/m/78-786314_computer-user-icon-peolpe-avatar-group-people-avatar.png"} alt="" />
                   <div className={styles.contactCard_info}>
                     <div className={styles.contactCard_name} >{chat.isGroupchat ? chat.chatname : getSender(user, chat.users).username}</div>

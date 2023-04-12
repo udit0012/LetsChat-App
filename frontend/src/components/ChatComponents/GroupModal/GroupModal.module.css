@@ -1,8 +1,15 @@
+:root{
+  --colorLight2:#ace6e9;
+  --colorLight1:#5fb9bd;
+  --colorLight:#0fbdc5;
+  --color1:#127d82;
+  --color2:#063638;
+}
 .dialog_box {
   width: 80%;
   height: 100%;
   position: absolute;
-  background: #ffe5ea;
+  background: rgb(241, 241, 241);
 }
 .dialog_headbar {
   display: flex;
@@ -11,7 +18,7 @@
 }
 .dialog_head {
   font-family: "PT Sans Narrow", sans-serif;
-  color: black;
+  color: var(--color1);
   pointer-events: none;
 }
 .dialog_head1 {
@@ -44,7 +51,7 @@
 .dialog_btn {
   border: none;
   outline: none;
-  background: #ff0048;
+  background: var(--color1);
   color: white;
   padding: 0.5rem 0.75rem;
   border-radius: 0.25rem;
@@ -55,7 +62,7 @@
   transition: 0.2s;
 }
 .dialog_btn:hover {
-  background: #b30e3d;
+  background: var(--color2);
 }
 .dialog_selectedbox {
   max-height: 9rem;
@@ -87,7 +94,7 @@
   top: 0;
   right: -0.25rem;
   cursor: pointer;
-  background: #ff0048;
+  background: var(--color1);
   border-radius: 50%;
   padding: 0.1rem 0.35rem;
 }
@@ -108,7 +115,7 @@
   border-radius: 0.5rem;
 }
 .dialog_contacts::-webkit-scrollbar-thumb {
-  background: #a8a8a8;
+  background: var(--color2);
   display: none;
   border-radius: 0.5rem;
   transition: 0.2s;
@@ -127,7 +134,7 @@
   border-radius: 0.5rem;
 }
 .dialog_contactCard:hover {
-  background: linear-gradient(to right, #ff6b95, #ff0048);
+  background: var(--color1);
   color: white;
 }
 .contactCard_img {

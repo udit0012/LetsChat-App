@@ -1,3 +1,10 @@
+:root{
+  --colorLight2:#ace6e9;
+  --colorLight1:#5fb9bd;
+  --colorLight:#0fbdc5;
+  --color1:#127d82;
+  --color2:#063638;
+}
 .about {
   font-family: "PT Sans Narrow", sans-serif;
   padding-bottom: 5rem;
@@ -13,7 +20,7 @@
   font-size: 3rem;
   margin-top: 5rem;
   margin-bottom: 3rem;
-  color: #ff0048;
+  color: var(--color1);
   font-weight: 600;
 }
 .about_cards {
@@ -26,7 +33,7 @@
   display: flex;
 }
 .card_icon {
-  color: #ff0048;
+  color: var(--color1);
   font-size: 1.9rem;
 }
 .card_desc{

@@ -9,8 +9,9 @@ import UserProfile from '../../Dialogboxes/UserProfile';
 import Spinner from '../../loaders/Spinner';
 import ScrollableChat from '../ScrollableChat/ScrollableChat';
 
-const EndPoint = "https://letschat-with-friends.herokuapp.com"
-// const EndPoint = "http://localhost:8000"
+
+// const EndPoint = "https://letschat-with-friends.herokuapp.com"
+const EndPoint = "http://localhost:8000"
 var socket, selecetdChatCompare;
 
 const MessageBox = () => {
