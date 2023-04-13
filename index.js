@@ -18,12 +18,17 @@ app.use('/LetsChatApi/chat', require('./backend/routes/chat'))
 const server = app.listen(port, () => {
     console.log(`Backend is listening at http://localhost:${port}`)
 })
-if(process.env.NODE_ENV==="production"){
-    app.use(express.static("frontend/build"));
-    app.get("*",(req,res)=>{
-        res.sendFile(path.resolve(__dirname,"frontend","build","index.html"));
-    })
-}
+// if(process.env.NODE_ENV==="production"){
+//     app.use( express.static(path.join(__dirname,"./frontend/build")));
+//     app.get("*",(req,res)=>{
+//         res.sendFile(path.resolve(__dirname,"./frontend/build/index.html"),function(err){
+//             if(err){
+//                 console.log(err);
+//                 res.status(500).send(err)
+//             }
+//         });
+//     })
+// }
 const io = require("socket.io")(server, {
     pingTimeout: 60000,
     cors: {
