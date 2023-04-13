@@ -82,16 +82,11 @@ Start the Client
 ![Chat Page Demo](https://github.com/udit0012/LetsChat-App/blob/main/Screenshots/ChatPage.png)
 ### Add and remove group member
 ![Group Details Demo](https://github.com/udit0012/LetsChat-App/blob/main/Screenshots/GroupDetails.png)
-![Add Member Demo](https://github.com/udit0012/LetsChat-App/blob/main/Screenshots/AddGroupMember.png)
-### Search Users
-![Search user Demo](https://github.com/udit0012/LetsChat-App/blob/main/Screenshots/SearchSideDrawer.png)
-### Real time chatting with typing indicator
-![Typing Indicator Demo](https://github.com/udit0012/LetsChat-App/blob/main/Screenshots/TypingIndicator.png)
+### Real time chatting with Typing Effect
+![Typing Indicator Demo](https://github.com/udit0012/LetsChat-App/blob/main/Screenshots/TypingEffect.png)
 ### Mobile Friendly
 ![Demo](https://github.com/udit0012/LetsChat-App/blob/main/Screenshots/MChat.png)
 ![Demo](https://github.com/udit0012/LetsChat-App/blob/main/Screenshots/MChatBox.png)
-### View Other UserProfile
-![User Profile Demo](https://github.com/udit0012/LetsChat-App/blob/main/Screenshots/UserProfile.png)
 
 
 

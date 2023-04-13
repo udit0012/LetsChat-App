@@ -12,7 +12,7 @@ const ScrollableChat = ({ messages, typing,room }) => {
                 <div className={m.sender._id === user._id ?styles.msgsent_text:styles.msgrecieve_text} >{selectedchat.isGroupchat && (isSamesender(messages, m, i, user._id) || isFirstMessage(messages, i, user._id)) && <div className={styles.msg_senderName}>{m.sender.username}</div>}{m.content}</div>
             </div>)
         })}
-        {(selectedchat._id===room._id)?<>{typing && <div className={styles.msg_recieve}><span className={styles.msgrecieve_text}><TypingLoader /></span></div>}</>:""}
+        {(selectedchat._id===room._id)?<>{!typing && <div className={styles.msg_recieve}><span className={styles.msgrecieve_text}><TypingLoader /></span></div>}</>:""}
     </ScrollableFeed>);
 };
 

@@ -68,12 +68,12 @@
 
 @media screen and (max-width:768px) {
   .msgsent_text,.msgrecieve_text{
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: .1rem .25rem;
-    padding: .6rem 1rem;
+    padding: .5rem 1rem;
     box-shadow: 0 0 4px rgba(133, 133, 133, 0.541);
   }
   .msg_sent, .msg_recieve {
-    margin: 0.25rem 0;
+    margin: 2px 0;
   }
 }

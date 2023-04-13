@@ -1,12 +1,12 @@
 .typing_dots {
   display: flex;
-  padding: 0.5rem .1rem;
+  padding: 7px 0rem;
 }
 .typing_dots div{
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background-color: white;
-  margin: 0 .25rem;
+  margin: 0 2px;
   border-radius: 50%;
   animation: updown 1s infinite;
 }

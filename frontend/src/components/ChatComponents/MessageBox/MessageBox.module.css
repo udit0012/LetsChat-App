@@ -46,6 +46,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  color: white;
 }
 .chatbox_header_backbtn span{
   font-size: 1.4rem;

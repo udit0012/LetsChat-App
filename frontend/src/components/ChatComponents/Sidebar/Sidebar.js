@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { Link,useLocation } from 'react-router-dom'
 import NoteContext from '../../../context/Notecontext'
-import GroupModal from '../GroupModal/GroupModal'
 import styles from './Sidebar.module.css'
 
 const Sidebar = ({opengroupmodal,groupmodal}) => {
